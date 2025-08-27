@@ -154,3 +154,20 @@
     question.classList.toggle('active');
   }
 </script>
+
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{% for block in section.blocks %}{% if block.type == "faq_item" %}
+        {
+          "@type": "Question",
+          "name": "{{ block.settings.question }}",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "{{ block.settings.answer | strip_html }}"
+          }
+        }{% unless forloop.last %},{% endunless %}{% endif %}{% endfor %}    
+      ]
+    }
+</script>

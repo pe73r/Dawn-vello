@@ -1,0 +1,7 @@
+{% assign status = '410 Gone' %}
+{%- capture server -%}
+Status: {{ status }}
+Content-Type: text/html; charset=utf-8
+{%- endcapture -%}
+{%- assign server_header = server | split: '' | join: '' -%}
+{{- server_header -}}

@@ -1,1 +1,86 @@
-{"name":"t:sections.header.name","type":"header","sections":{"announcement_bar_zDqBgW":{"type":"announcement-bar","blocks":{"announcement_bydCk3":{"type":"announcement","settings":{"text":"🔥¡DESCUENTAZOS DE DICIEMBRE!","link":"shopify:\/\/collections\/ofertas-del-mes"}},"announcement_7XL6zX":{"type":"announcement","disabled":true,"settings":{"text":"Accede a la lista prioritaria de BLACKFRIDAY","link":"shopify:\/\/pages\/lista-prioritaria"}}},"block_order":["announcement_bydCk3","announcement_7XL6zX"],"custom_css":[".link {font-size: inherit; font-family: inherit; font-weight: inherit; padding: inherit;}"],"settings":{"color_scheme":"scheme-311a7f12-de7f-4bb2-98a1-31411433d0fb","show_line_separator":true,"show_social":false,"auto_rotate":false,"change_slides_speed":5,"enable_country_selector":false,"enable_language_selector":false}},"header":{"type":"header","custom_css":["#HeaderDrawer-black-friday {margin: 0 15px; padding: 1.1rem 1.5rem; color: #fff; font-weight: bold; background-color: var(--custom-rosa); border-radius: 3rem;}","#HeaderMenu-black-friday {color: #fff; font-weight: bold; background-color: var(--custom-rosa); border-radius: 3rem;}","li > details[open] > .header__submenu {height: 300px; overflow-y: auto;}"],"settings":{"logo_position":"middle-left","menu":"main-menu-desktop","menu_type_desktop":"dropdown","sticky_header_type":"always","show_line_separator":true,"color_scheme":"scheme-1","menu_color_scheme":"scheme-1","enable_country_selector":true,"enable_language_selector":true,"enable_customer_avatar":false,"mobile_logo_position":"center","margin_bottom":0,"padding_top":20,"padding_bottom":20}},"breadcrumbs_YeQgMP":{"type":"Breadcrumbs","settings":{"breadcrumbs_home_icon_bool":true,"breadcrumb_delimeter":"angle_right","breadcrumb_bg_color":"#ffffff","breadcrumb_text_color":"#465076","breadcrumb_accent_color_bool":false,"breadcrumb_accent_color":"#4770db","enable_product_page":true,"enable_collection_page":true,"enable_complete_site":false}}},"order":["announcement_bar_zDqBgW","header","breadcrumbs_YeQgMP"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "name": "t:sections.header.name",
+  "type": "header",
+  "sections": {
+    "announcement_bar_zDqBgW": {
+      "type": "announcement-bar",
+      "blocks": {
+        "announcement_bydCk3": {
+          "type": "announcement",
+          "settings": {
+            "text": "10% en packs comprando 2 o más uds.",
+            "link": "shopify://collections/tienda-online"
+          }
+        }
+      },
+      "block_order": [
+        "announcement_bydCk3"
+      ],
+      "custom_css": [
+        ".link {font-size: inherit; font-family: inherit; font-weight: inherit; padding: inherit;}"
+      ],
+      "settings": {
+        "color_scheme": "scheme-311a7f12-de7f-4bb2-98a1-31411433d0fb",
+        "show_line_separator": true,
+        "show_social": false,
+        "auto_rotate": false,
+        "change_slides_speed": 5,
+        "enable_country_selector": false,
+        "enable_language_selector": false
+      }
+    },
+    "header": {
+      "type": "header",
+      "custom_css": [
+        "#HeaderDrawer-black-friday {margin: 0 15px; padding: 1.1rem 1.5rem; color: #fff; font-weight: bold; background-color: var(--custom-rosa); border-radius: 3rem;}",
+        "#HeaderMenu-black-friday {color: #fff; font-weight: bold; background-color: var(--custom-rosa); border-radius: 3rem;}",
+        "li > details[open] > .header__submenu {height: 300px; overflow-y: auto;}",
+        "#HeaderMenu-compra-online-ultimas-unidades, ul.menu-drawer__menu #HeaderDrawer-compra-online-ultimas-unidades {color: red;}"
+      ],
+      "settings": {
+        "logo_position": "middle-left",
+        "menu": "main-menu-desktop",
+        "menu_type_desktop": "dropdown",
+        "sticky_header_type": "always",
+        "show_line_separator": false,
+        "color_scheme": "scheme-1",
+        "menu_color_scheme": "scheme-1",
+        "enable_country_selector": true,
+        "enable_language_selector": true,
+        "enable_customer_avatar": false,
+        "mobile_logo_position": "center",
+        "margin_bottom": 0,
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    },
+    "breadcrumbs_YeQgMP": {
+      "type": "Breadcrumbs",
+      "settings": {
+        "breadcrumbs_home_icon_bool": true,
+        "breadcrumb_delimeter": "angle_right",
+        "breadcrumb_bg_color": "#ffffff",
+        "breadcrumb_text_color": "#465076",
+        "breadcrumb_accent_color_bool": false,
+        "breadcrumb_accent_color": "#4770db",
+        "enable_product_page": true,
+        "enable_collection_page": true,
+        "enable_complete_site": false
+      }
+    }
+  },
+  "order": [
+    "announcement_bar_zDqBgW",
+    "header",
+    "breadcrumbs_YeQgMP"
+  ]
+}

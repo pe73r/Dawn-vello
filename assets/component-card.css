@@ -593,3 +593,17 @@
     clip-path: polygon(var(--shape--blob-5));
   }
 }
+
+/* Added by Shawn R. Theme Support, August 04, 2025 */
+@media screen and (min-width: 990px) {
+  .card:hover .available-options,
+  .card-wrapper:hover .available-options {
+    display: none;
+  }
+
+  .card:hover .variant-options,
+  .card-wrapper:hover .variant-options {
+    display: block !important;
+  }
+}
+/* End edit by Shawn R. */

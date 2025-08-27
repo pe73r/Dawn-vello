@@ -1,0 +1,81 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "00_custom_header_text_d4PAyr": {
+      "type": "00-custom-header-text",
+      "blocks": {
+        "heading_cUcdcY": {
+          "type": "heading",
+          "settings": {
+            "heading": "EL RINCÓN DE <strong>SINVELLO!</strong>",
+            "heading_size": "hxl"
+          }
+        },
+        "text_Uhtxd9": {
+          "type": "text",
+          "settings": {
+            "text": "<p>¡Todo sobre depilación láser!</p>",
+            "text_style": "subtitle"
+          }
+        }
+      },
+      "block_order": [
+        "heading_cUcdcY",
+        "text_Uhtxd9"
+      ],
+      "custom_css": [
+        ".banner:after {background-color: var(--custom-rosa);}",
+        "h2 {line-height: 1;}",
+        "strong {display: block;}",
+        ".rte {color: #fff; font-size: 1.6em;}"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/vive-una-experiencia-premium.jpg",
+        "image_overlay_opacity": 70,
+        "image_height": "small",
+        "desktop_content_position": "middle-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "scheme-42775793-0fe5-4818-887b-2771f21723d0",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": false
+      }
+    },
+    "main": {
+      "type": "main-blog",
+      "custom_css": [
+        "h1 {display: none;}",
+        ".blog-articles {grid-template-columns: 1fr 1fr 1fr;}",
+        "h3 {color: var(--custom-rosa);}",
+        ".media {border-radius: 3rem 3rem 0 0; overflow: hidden;}",
+        ".card {box-shadow: 0px 0px 5px 0px #ddd; border-radius: 3rem;}",
+        ".button {margin: 0 2rem 2rem; text-decoration: none; background-color: transparent; color: var(--custom-rosa); border: 2px solid var(--custom-rosa); padding: 1rem 5rem; width: fit-content;}",
+        ".button:hover::after {box-shadow: none;}",
+        "@media (max-width: 768px){.blog-articles {grid-template-columns: auto;}}"
+      ],
+      "settings": {
+        "layout": "grid",
+        "show_image": true,
+        "image_height": "medium",
+        "show_date": false,
+        "show_author": false,
+        "padding_top": 100,
+        "padding_bottom": 100
+      }
+    }
+  },
+  "order": [
+    "00_custom_header_text_d4PAyr",
+    "main"
+  ]
+}

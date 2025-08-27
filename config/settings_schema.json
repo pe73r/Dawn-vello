@@ -1,5 +1,16 @@
 [
   {
+  "name": "410 URLs",
+  "settings": [
+    {
+      "type": "text",
+      "id": "gone_urls",
+      "label": "410 Gone URLs",
+      "info": "URLs separadas por comas que deben retornar 410"
+    }
+  ]
+},
+  {
     "name": "theme_info",
     "theme_name": "Dawn",
     "theme_version": "15.0.2",
@@ -1466,4 +1477,5 @@
       }
     ]
   }
+  
 ]

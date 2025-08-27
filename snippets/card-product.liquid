@@ -233,6 +233,41 @@
             {%- endif -%}
 
             {% render 'price', product: card_product, price_class: '', show_compare_at_price: true %}
+{% comment %} Added by Shawn R. August 4 2025 {% endcomment %}
+ <!-- Shawn test - we are here -->
+{%- if card_product.variants.size > 1 and show_variant_options -%}
+  {%- unless card_product.available == false and show_variant_options_sold_out == false -%}
+    <div class="caption-with-letter-spacing light">
+      <span class="visually-hidden">{{ 'products.product.variant_options' | t }}</span>
+      <span class="available-options{% if enable_variant_options_hover %} small-hide medium-hide{% else %} hidden{% endif %}">{{ 'products.product.variant_options' | t }}</span>
+      <span class="variant-options{% if enable_variant_options_hover %} large-up-hide{% endif %}">
+        {%- for option in card_product.options -%}
+          {%- capture downcased_option -%}{{ option | downcase }}{%- endcapture -%}
+          {%- liquid
+            assign option_index = forloop.index0
+            assign option_count = 0
+            assign current_options = ''
+            if card_product.variants.size > 1
+              for variant in card_product.variants
+                assign current_option = variant.options[option_index]
+                unless current_options contains current_option
+                  if option_count > 0
+                    assign current_options = current_options | join: '|' | append: '|'
+                  endif
+                  assign current_options = current_options | append: current_option
+                  assign current_options = current_options | split: '|' | sort
+                  assign option_count = current_options | size
+                endunless
+              endfor
+            endif
+          -%}
+          {{ current_options.size }} {% if current_options.size > 1 %}{{ option | append: 's' }}{% else %}{{ option }}{% endif %}{% unless forloop.last %},{% endunless %}
+        {%- endfor -%}
+      </span>
+    </div>
+  {%- endunless -%}
+{%- endif -%}
+{% comment %} End code added by Shawn R.{% endcomment %}
             {%- if card_product.quantity_price_breaks_configured? -%}
               {% if card_product.variants.size == 1 and quick_add == 'bulk' %}
                 {% liquid
@@ -331,6 +366,7 @@
                   id="{{ product_form_id }}-submit"
                   type="submit"
                   name="add"
+                  disabled
                   class="quick-add__submit button button--full-width button--secondary{% if horizontal_quick_add %} card--horizontal__quick-add animate-arrow{% endif %}"
                   aria-haspopup="dialog"
                   aria-labelledby="{{ product_form_id }}-submit title-{{ section_id }}-{{ card_product.id }}"
@@ -376,6 +412,7 @@
                     name="id"
                     value="{{ card_product.selected_or_first_available_variant.id }}"
                     class="product-variant-id"
+                    disabled
                     {% if card_product.selected_or_first_available_variant.available == false %}
                       disabled
                     {% endif %}
@@ -384,6 +421,7 @@
                     id="{{ product_form_id }}-submit"
                     type="submit"
                     name="add"
+                    disabled
                     class="quick-add__submit button button--full-width button--secondary{% if horizontal_quick_add %} card--horizontal__quick-add{% endif %}"
                     aria-haspopup="dialog"
                     aria-labelledby="{{ product_form_id }}-submit title-{{ section_id }}-{{ card_product.id }}"
@@ -457,6 +495,7 @@
                   id="{{ product_form_id }}-submit"
                   type="submit"
                   name="add"
+                  disabled
                   class="quick-add__submit button button--full-width button--secondary"
                   aria-haspopup="dialog"
                   aria-labelledby="{{ product_form_id }}-submit title-{{ section_id }}-{{ card_product.id }}"

@@ -1,0 +1,126 @@
+<script type="application/ld+json">{{ metaobject.faqs }}</script>
+<style>
+  .faq-accordion {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem 1rem 5rem;
+  }
+  .faq-title {
+    text-align: center;
+    font-size: 3.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+      
+  }
+  .faq-item {
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 1rem;
+  }
+  .faq-question {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 1rem 0;
+  }
+  .faq-question-text {
+    flex-grow: 1;
+    margin-left: 1rem;
+    font-weight: bold;
+    font-size: 1.2em;
+    transition: color 0.5s ease;
+  }
+  .faq-question-text.active{
+    color: var(--custom-rosa);
+  }
+  .faq-icon {
+    width: 32px;
+    height: 32px;
+    transition: transform 0.5s ease, background-color 0.5s ease;
+    flex-shrink: 0;
+    background-color: var(--custom-rosa);
+    border-radius: 50%;
+    padding: 5px;
+  }
+  .faq-icon.active {
+    transform: rotate(180deg);
+    background-color: #000;
+  }
+  .faq-answer {
+    display: none;
+    padding: 1rem 1rem 2rem;
+  }
+  .faq-answer.active {
+    display: block;
+  }
+  .faq-answer p{
+    margin: 0;
+  }
+</style>
+<section class="color-{{ section.settings.color_scheme }}">
+  <div class="faq-accordion" id="faqs-container">
+    <h2 class="faq-title">{{ section.settings.section_title }}</h2>
+  </div>
+</section>
+
+<script>
+  let json = `{{ metaobject.faqs }}`;
+  let object = JSON.parse(json);  
+  document.querySelector("#faqs-container").innerHTML += generateFAQHTML(object.mainEntity);
+
+  function generateFAQHTML(faqs) {
+    let html = '';
+
+    faqs.forEach(faq => {
+        html += `
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleAnswer(this)">
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6 9L12 15L18 9" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+                <h3 class="faq-question-text">${faq.name}</h3>
+            </div>
+            <div class="faq-answer">
+                <p>${faq.acceptedAnswer.text}</p>
+            </div>
+        </div>
+        `;
+    });
+
+    return html;
+  }
+  function toggleAnswer(element) {
+    const answer = element.nextElementSibling;
+    const icon = element.querySelector('.faq-icon');
+    const question = element.querySelector('.faq-question-text');
+    answer.classList.toggle('active');
+    icon.classList.toggle('active');
+    question.classList.toggle('active');
+  }
+
+</script>
+
+{% schema %}
+{
+  "name": "Schema FAQs Display",
+  "settings": [
+    {
+      "type": "inline_richtext",
+      "id": "section_title",
+      "label": "Título de la sección",
+      "default": "Preguntas frecuentes"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Esquema de color",
+      "default": "scheme-1"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Schema FAQs Display",
+    }
+  ]
+}
+{% endschema %}

@@ -357,20 +357,23 @@
           "id": "consent_anchor_text",
           "label": "Texto del enlace del consentimiento",
           "default": "Política de Privacidad"
-        }
-        ,
+        },
         {
           "type": "text",
           "id": "currentCenter",
           "label": "Centro actual"
+        },
+        {
+          "type": "url",
+          "id": "redirect_url",
+          "label": "Pagina de gracias"
         }
       ]
     }
   ],
   "presets": [
     {
-      "name": "Header Personalizado Tienda",
-      "category": "Custom"
+      "name": "Header Personalizado Tienda"      
     }
   ]
 }
@@ -653,7 +656,7 @@
                 <p class="phone_text">{{ block.settings.phone_text }}</p>
                 <p class="phone_text">{{ block.settings.phone }}</p>                
                 <p class="phone_url">
-                  <a href="https://wa.me/+34{{ block.settings.phone }}" title="{{ block.settings.whatsapp_url_text }}">
+                  <a href="https://wa.me/+34{{ block.settings.phone | replace: " ", "" }}" title="{{ block.settings.whatsapp_url_text }}">
                     <img src="https://cdn.shopify.com/s/files/1/0884/5865/8056/files/whatsapp.svg" alt="Whatsapp" width="16" height="16" />
                     {{ block.settings.whatsapp_url_text }}
                   </a></p>
@@ -887,3 +890,15 @@
     {% endfor %}
   </div>
 </section>
+
+{% for block in section.blocks %}
+  {% if block.type == "form" %}
+    {% if block.settings.redirect_url != null %}    
+    <script>
+    if (window.location.href.includes("contact_posted=true#")) {
+        window.location.href = "{{block.settings.redirect_url}}";
+    }
+    </script>
+    {% endif %}
+  {% endif %}
+{% endfor %}

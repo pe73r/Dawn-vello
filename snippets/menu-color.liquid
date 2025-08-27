@@ -1,0 +1,84 @@
+{%- assign color_brightness = menu_color | color_brightness -%}
+
+{%- if color_brightness < 64 -%}
+  {%- assign focus_color = menu_color | color_lighten: 15 -%}
+{%- else -%}
+  {%- assign focus_color = menu_color | color_darken: 10 -%}
+{%- endif -%}
+
+{%- if color_brightness < 26 -%}
+  {%- assign focus_color = menu_color | color_lighten: 25 -%}
+{%- endif -%}
+
+<style>
+    .menu-label-color {
+        color: {{ menu_color }} !important;
+        {% if bold %}
+        font-weight: 700;
+        {% endif %}
+    }
+
+    .menu-label-color:focus,
+    .menu-label-color:not([disabled]):hover {
+        color: {{ focus_color }};
+        opacity: initial;
+    }
+
+    .menu-label-color:focus .site-nav__label,
+    .menu-label-color:not([disabled]):hover .site-nav__label {
+        border-bottom-color: {{ menu_color }};
+    }
+</style>
+
+<script defer="defer">
+    class MenuColor extends HTMLElement {
+        constructor() {
+            super();
+        }
+
+        connectedCallback() {
+            setTimeout(() => {
+                document.addEventListener("DOMContentLoaded", colorItems.bind(this));
+                {% if request.design_mode %}
+                document.addEventListener("shopify:section:load", colorItems.bind(this));
+                {% endif %}
+
+                function sanitizeLabel(label) {
+                    return label.toLowerCase().replace(/\s+/g, '').normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+                }
+
+                function colorItems() {
+                    const menuElement = document.querySelector('menu-color');
+                    const menuColor = menuElement.getAttribute('data-menu-color');
+                    const menuItemToColor = menuElement.getAttribute('data-menu-item');
+                    const menuChildList = menuElement.hasAttribute('data-menus');
+
+                    console.log("Target item:", menuItemToColor);
+
+                    let menuItems;
+                    if (menuChildList) {
+                        menuItems = document.querySelectorAll('summary.menu-drawer__menu-item, nav a span, nav summary span, nav.menu-drawer__navigation a, nav.header__inline-menu a');
+                    } else {
+                        menuItems = document.querySelectorAll(':scope nav.menu-drawer__navigation > ul > li > a, :scope nav.menu-drawer__navigation > ul > li > details > summary, :scope nav.header__inline-menu > ul > li > header-menu > details > summary > span, :scope nav > ul > li a > span');
+                    }
+
+                    menuItems.forEach((label) => {
+                        const menuItemLabel = sanitizeLabel(label.innerText);
+                        console.log("Label comparing:", menuItemLabel);
+
+                        if (menuItemToColor && menuItemLabel.includes(sanitizeLabel(menuItemToColor))) {
+                            label.style.color = menuColor;
+                            label.classList.add('menu-label-color');
+                        }
+                    });
+
+                    {% if request.design_mode %}
+                    document.removeEventListener("shopify:section:load", colorItems.bind(this));
+                    {% endif %}
+                }
+            });
+        }
+    }
+
+    customElements.define('menu-color', MenuColor);
+</script>

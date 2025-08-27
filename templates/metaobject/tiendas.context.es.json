@@ -1,0 +1,35 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "parent": "metaobject/tiendas.json",
+  "context": {
+    "market": "es"
+  },
+  "sections": {
+    "00_custom_shema_faqs_QwqDEg": {
+      "disabled": true,
+      "settings": {
+        "color_scheme": "scheme-2"
+      },
+      "blocks": {}
+    }
+  },
+  "order": [
+    "custom_liquid_YBRJF6",
+    "00_custom_header_shops_w4qr8k",
+    "rich_text_xDGcUj",
+    "multicolumn_DBEVyY",
+    "rich_text_YmMetJ",
+    "00_custom_widget_shops_X9TeGi",
+    "00_custom_list_nearby_center_TpnCzk",
+    "rich_text_Wp99gV",
+    "00_custom_shema_faqs_QwqDEg"
+  ]
+}
