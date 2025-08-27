@@ -2256,11 +2256,11 @@
                             
 <script>
   document.addEventListener("DOMContentLoaded", function () {
-    const form = document.querySelector('form#product-form-template--22925224313096__main');
+    const form = document.querySelector('product-form form[method="post"]');
     const insertBeforeElement = form.querySelector('.product-form__buttons');
 
     if (form && insertBeforeElement) {
-        form.querySelectorAll("[type='submit']")[0].setAttribute("disabled", "true");
+        form.querySelectorAll(".submit-btn")[0].setAttribute("disabled", "true");
         form.action = "";
         const divContainer = document.createElement("div");
         divContainer.className = "select-container";
@@ -2274,7 +2274,7 @@
         span.style.color = "red";
 
         const select = document.createElement("select");
-        select.name = "properties[centro]";
+        select.name = "properties[Centro]";
         select.id = "centro";        
         {% if product.metafields.custom.centros_excluidos %}
         let ids_centros = {{ product.metafields.custom.centros_excluidos }};
@@ -2318,9 +2318,12 @@
       select.addEventListener("change", function() {
          if(select.value == "") return;
            span.remove();
-          form.querySelectorAll("[type='submit']")[0].removeAttribute("disabled");
+          form.querySelectorAll(".submit-btn")[0].removeAttribute("disabled")
+          form.querySelectorAll(".submit-btn")[0].classList.remove("disabled");
+          form.querySelectorAll(".submit-btn")[0].setAttribute("type", "submit");
           form.action = "/cart/add";
       });
+      
     }    
   });
 </script>

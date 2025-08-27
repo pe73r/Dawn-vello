@@ -1,6 +1,20 @@
 <!doctype html>
 <html class="js" lang="{{ request.locale.iso_code }}">
   <head>
+    {% if page.metaobject.schema.value != blank %}
+  <script type="application/ld+json">
+    {{ page.metaobject.schema.value | json }}
+  </script>
+{% endif %}
+    <!-- Publytcs -->
+    <script defer data-domain="sinvelloporlaser.es/ojBzNx"
+src="https://api.publytics.net/js/script.manual.min.js"></script>
+<script>
+     window.publytics = window.publytics || function() {
+(window.publytics.q = window.publytics.q || []).push(arguments) };
+     publytics('pageview');
+</script>
+
      <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -339,26 +353,29 @@
       if (Shopify.designMode) {
         document.documentElement.classList.add('shopify-design-mode');
       }
-    </script>
+    </script>    
   </head>
 
-  <body class="gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">
-    <a class="skip-to-content-link button visually-hidden" href="#MainContent">
-      {{ 'accessibility.skip_to_text' | t }}
-    </a>
-
-    {%- if settings.cart_type == 'drawer' -%}
-      {%- render 'cart-drawer' -%}
-    {%- endif -%}
-
-    {% sections 'header-group' %}
-    {% sections 'Breadcrumbs' %}
-
+  <body class="gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">    
+    
+      <a class="skip-to-content-link button visually-hidden" href="#MainContent">
+        {{ 'accessibility.skip_to_text' | t }}
+      </a>
+  
+      {%- if settings.cart_type == 'drawer' -%}
+        {%- render 'cart-drawer' -%}
+      {%- endif -%}
+    {% if page.metafields.custom.ocultar_encabezado != true %}
+      {% sections 'header-group' %}
+      {% sections 'Breadcrumbs' %}
+    {% endif %}
     <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
       {{ content_for_layout }}
     </main>
-
-    {% sections 'footer-group' %}
+    {% if page.metafields.custom.ocultar_pie_de_pagina != true %}
+      {% sections 'footer-group' %}
+    {% endif %}
+    
 
     <ul hidden>
       <li id="a11y-refresh-page-message">{{ 'accessibility.refresh_page' | t }}</li>
@@ -422,6 +439,16 @@
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W5NL74L"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
+
+    <script async defer src='https://app.visitortracking.com/assets/js/tracer.js'></script>
+<script>
+function init_tracer() { 
+   var tracer = new Tracer({  
+   websiteId : "620d5b33-2d16-436f-a6b4-ed91c5b80c41",  
+   async : true, 
+   debug : false }); 
+ } 
+ </script>
 
   </body>
 </html>

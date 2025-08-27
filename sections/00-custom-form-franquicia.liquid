@@ -115,7 +115,12 @@
       "id": "submit_text",
       "label": "Texto del botón de envío",
       "default": "ENVIAR"
-    }    
+    },
+    {
+      "type": "url",
+      "id": "redirect_url",
+      "label": "Pagina de gracias"
+    }
   ],
   "presets": [
     {
@@ -126,7 +131,7 @@
 {% endschema %}
 <div class="franchise-form-container">
 <div class="franchise-form-box">
-  <h2 class="franchise-form-title">{{ section.settings.form_title }}</h2>
+  <h2 class="franchise-form-title" id="form-franquicia" style="margin-top: -150px; padding-top: 150px;">{{ section.settings.form_title }}</h2>
   
   {% form 'contact' %}   
     <input type="hidden" name="contact[title]" value="franquicia-form">
@@ -177,11 +182,17 @@
         <option value="Contrataría personal">Contrataría personal</option>
       </select>
     </div>
-
-    <div class="form-field">
+    <div class="form-field select-container">
       <label for="ubicacion">{{ section.settings.ubicacion_label }}</label>
-      <input type="text" id="ubicacion" name="contact[ubicacion]" required placeholder="{{ section.settings.ubicacion_placeholder }}">
+      <select id="ubicacion" name="contact[ubicacion]" required>
+        <option value="">Selecciona una ubicación</option>
+        {% for ciudades in shop.metaobjects.ciudades_sin_centros.values %}
+          <option value="{{ ciudades.nombre }}">{{ ciudades.nombre }}</option>
+        {% endfor %}
+      </select>
     </div>
+
+    
 
     <div class="form-field select-container">
       <label for="inversion">{{ section.settings.inversion_label }}</label>
@@ -378,3 +389,11 @@
 
   
 </style>
+
+{% if section.settings.redirect_url != null %}
+<script>
+if (window.location.href.includes("contact_posted=true#contact_form")) {
+    window.location.href = "{{section.settings.redirect_url}}";
+}
+</script>
+{% endif %}

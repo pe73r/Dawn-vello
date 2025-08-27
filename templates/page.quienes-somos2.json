@@ -1,0 +1,272 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "rich_text_pwiqR9": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_DcwC4G": {
+          "type": "heading",
+          "settings": {
+            "heading": "Quíenes somos",
+            "heading_size": "hxl"
+          }
+        }
+      },
+      "block_order": [
+        "heading_DcwC4G"
+      ],
+      "disabled": true,
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-311a7f12-de7f-4bb2-98a1-31411433d0fb",
+        "full_width": true,
+        "padding_top": 100,
+        "padding_bottom": 100
+      }
+    },
+    "custom_liquid_GirxPY": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<!-- HERO BANNER CON VIDEO Y TEXTO -->\n<div style=\"position: relative; width: 100%; height: 500px; overflow: hidden; background: black; font-family: 'Nunito Sans', Arial, sans-serif;\">\n  <!-- Video de fondo -->\n  <video autoplay muted loop playsinline \n         style=\"position: absolute; top: 50%; left: 50%; width: auto; height: 100%; min-width: 100%; min-height: 100%; transform: translate(-50%, -50%); object-fit: cover; z-index: 1;\">\n    <source src=\"https://cdn.shopify.com/videos/c/o/v/89b26d66a1224f48a72972acd68f75ad.mp4\" type=\"video/mp4\">\n    Tu navegador no soporta el video.\n  </video>\n\n  <!-- Texto sobre el video -->\n  <div style=\"position: absolute; bottom: 20px; left: 20px; color: #ffffff; z-index: 2; max-width: 300px; text-transform: uppercase;\">\n    <p style=\"font-size: 14px; margin: 0 0 5px 0; font-weight: 600;\">SOBRE NOSOTROS</p>\n    <h1 style=\"font-size: 38px; margin: 0; font-weight: 900; line-height: 1.1; color: #ffffff;\">\n      SIN VELLO,<br>SIN LÍMITES\n    </h1>\n  </div>\n</div>\n\n<!-- BLOQUE 2: MISIÓN -->\n<section style=\"padding: 20px 10px; background: #fff; font-family: 'Nunito Sans', Arial, sans-serif; margin-top: 60px;\">\n  <div style=\"max-width: 500px; margin-left: 0; margin-right: auto;\">\n    <h2 style=\"font-size: 20px; font-weight: 900; text-align: left; color: black; margin: 0; text-transform: uppercase;\">\n      Nuestra misión es hacer la depilación láser accesible, eficaz y sin complicaciones\n    </h2>\n    <p style=\"font-size: 12px; color: #555; margin: 5px 0 0 0; text-align: left;\">\n      SALVA RAYA CEO & FOUNDER\n    </p>\n  </div>\n</section>\n\n<!-- Importar fuente Nunito Sans -->\n<style>\n  @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@600;900&display=swap');\n</style>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "video_bFYJz3": {
+      "type": "video",
+      "disabled": true,
+      "custom_css": [
+        ".video-section {margin-bottom: -20rem; z-index: 1;}",
+        "@media (max-width: 768px) {.video-section {margin-bottom: 0rem; padding: 0; } .video-section img, .video-section video, .deferred-media__poster {border-radius: 0; }}"
+      ],
+      "settings": {
+        "heading": "",
+        "heading_size": "h1",
+        "enable_video_looping": false,
+        "video": "shopify://files/videos/Video_20250806_131402_220 - Compressed with FlexClip (1).mp4",
+        "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+        "description": "",
+        "full_width": false,
+        "color_scheme": "scheme-1",
+        "padding_top": 100,
+        "padding_bottom": 100
+      }
+    },
+    "rich_text_PzPB8p": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_FVr8j3": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "heading": "<strong> Nuestra misión es hacer la depilación láser accesible, eficaz y sin complicaciones</strong>",
+            "heading_size": "h1"
+          }
+        },
+        "text_cwQhg6": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "<p><strong>Nulla id varius enim, nec </strong>dictum sem. Curabitur vitae interdum mi, id efficitur mi. Aliquam erat volutpat. Aliquam sit amet imperdiet ex, at convallis nisi. <strong>Aenean ele</strong>ifend, ex at laoreet facilisis, velit mauris ultricies felis, ut auctor quam eros vitae justo. Integer risus lectus, tempor quis <strong>faucibus quis, dictum vitae</strong> quam. Nunc mollis urna ante, eu mattis quam hendrerit ac. Donec in tellus non orci dapibus lobortis sit amet vel libero. Nam consectetur iaculis purus, a aucto<strong>r nisl venenatis</strong> ac.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_FVr8j3",
+        "text_cwQhg6"
+      ],
+      "disabled": true,
+      "custom_css": [
+        "@media (min-width: 768px) {.isolate {padding-top: 5rem; } .rte {text-align: center; }}",
+        "p {color: #000;}"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-61c7d82a-9edb-45dc-912f-d8acc8e2bf2f",
+        "full_width": true,
+        "padding_top": 100,
+        "padding_bottom": 100
+      }
+    },
+    "custom_liquid_bCteAt": {
+      "type": "custom-liquid",
+      "disabled": true,
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<!-- BLOQUE 2: Misión con texto en negrita alineado a la izquierda y ancho controlado -->\n<section style=\"padding: 10px 10px; background: #fff;\">\n  <div style=\"max-width: 500px; margin-left: 0; margin-right: auto;\">\n    <h2 style=\"font-size: 20px; font-weight: 900; text-align: left; color: black; margin: 0;\">\n      Nuestra misión es hacer la depilación láser accesible, eficaz y sin complicaciones\n    </h2>\n    <p style=\"font-size: 12px; color: #555; margin: 5px 0 0 0; text-align: left;\">\n      Salva Raya CEO & Founder\n    </p>\n  </div>\n</section>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "custom_liquid_7FaTq7": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<div style=\"display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; align-items: stretch; padding: 40px 20px; background-color: #f9f9f9;\">\n  <!-- Video -->\n  <div style=\"flex: 1 1 350px; max-width: 600px; aspect-ratio: 16/9; overflow: hidden; border-radius: 10px;\">\n    <video autoplay muted loop playsinline style=\"width: 100%; height: 100%; object-fit: cover; border-radius: 10px; display: block;\">\n      <source src=\"https://cdn.shopify.com/videos/c/o/v/8af880a2865744b0b61ebf77295716f9.mov\" type=\"video/mp4\">\n      Tu navegador no soporta el video.\n    </video>\n  </div>\n\n  <!-- Imagen -->\n  <div style=\"flex: 1 1 350px; max-width: 600px; aspect-ratio: 16/9; overflow: hidden; border-radius: 10px;\">\n    <img src=\"https://cdn.shopify.com/s/files/1/0884/5865/8056/files/IMG_0217_ca0e9647-77c5-4568-abd7-232dadf50739.jpg?v=1754562616\" alt=\"Imagen\" style=\"width: 100%; height: 100%; object-fit: cover; border-radius: 10px; display: block;\">\n  </div>\n</div>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "00_custom_team_CpgLB3": {
+      "type": "00-custom-team",
+      "disabled": true,
+      "settings": {
+        "logo": "shopify://shop_images/logo.png",
+        "primary_color": "#15152e",
+        "accent_color": "#e7307d"
+      }
+    },
+    "image_with_text_iVEYdT": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_zBPkrq": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>El futuro de la depilación está aquí, y es SinVello!</strong>",
+            "heading_size": "h2"
+          }
+        },
+        "text_L6ppNa": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Somos la marca para quienes no se conforman con menos. Para los que quieren resultados reales sin perder tiempo ni dinero en promesas vacías. En SinVello! apostamos por depilación láser potente, con tecnología punta, precios claros y un trato cercano que te hace sentir en casa. Desde Córdoba, hemos crecido hasta más de 200 centros en toda España, liberando pieles y dando confianza a miles de personas.<br/></p>",
+            "text_style": "body"
+          }
+        },
+        "button_dYxGJB": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Etiqueta de botón",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_zBPkrq",
+        "text_L6ppNa",
+        "button_dYxGJB"
+      ],
+      "custom_css": [],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/Captura_de_pantalla_2025-07-14_165412.png",
+        "height": "medium",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "image_behavior": "zoom-in",
+        "mobile_content_alignment": "center",
+        "padding_top": 0,
+        "padding_bottom": 36
+      }
+    },
+    "multicolumn_eNDEFT": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_ywF7jB": {
+          "type": "column",
+          "disabled": true,
+          "settings": {
+            "title": "Confia en SinVello!",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_xN7dMq": {
+          "type": "column",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/Diseno_sin_titulo_04e4e7ad-476d-4153-89ec-b4a105ebf1cb.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_ywF7jB",
+        "column_xN7dMq"
+      ],
+      "custom_css": [
+        ".multicolumn > div {padding: 5rem 0; max-width: 100%; margin: 0;}",
+        "ul {gap: 0; grid-template-columns: 40% 60%; display: grid; padding: 0;}",
+        "li:nth-child(1) {background-color: var(--custom-rosa); text-align: center;}",
+        "li:nth-child(2) {background-color: #eee;}",
+        "h3 {font-size: 4em;}",
+        "p {color: #000;}",
+        "li > div {max-width: 530px; height: auto;}",
+        "li {display: flex; justify-content: center; align-items: center; padding: 5rem;}",
+        ".link {margin-top: 2rem; border-color: var(--custom-rosa); color: var(--custom-rosa);}"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 1,
+        "column_alignment": "left",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "scheme-aec1a7bc-c285-4038-a699-d278b1db5777",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "custom_liquid_3GKBYN": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<style>\n  .marquee-container {\n    overflow: hidden;\n    background: #fff;\n    padding: 10px 0;\n  }\n\n  .marquee-content {\n    display: flex;\n    gap: 40px;\n    width: max-content;\n    animation: marquee-left 30s linear infinite;\n    align-items: center;\n  }\n\n  .marquee-content img {\n    height: 40px;\n    width: auto;\n    object-fit: contain;\n  }\n\n  /* Forzar tamaño igual para Emprendedores y Córdoba Buenas Noticias */\n  .marquee-content img[alt=\"Emprendedores\"],\n  .marquee-content img[alt=\"Córdoba Buenas Noticias\"] {\n    height: 40px;\n    width: auto;\n    max-width: 120px;\n    object-fit: contain;\n  }\n\n  @keyframes marquee-left {\n    0% {\n      transform: translateX(0);\n    }\n    100% {\n      transform: translateX(-50%);\n    }\n  }\n</style>\n\n<div class=\"marquee-container\">\n  <div class=\"marquee-content\">\n    <!-- Logos con links a sus noticias -->\n    <a href=\"https://www.abc.es/content-local/sin-vello-180-centros/\" target=\"_blank\" rel=\"noopener\">\n      <img src=\"https://cdn.shopify.com/s/files/1/0884/5865/8056/files/descarga_3.png?v=1754565129\" alt=\"ABC\" />\n    </a>\n    <a href=\"https://www.ondacero.es/emisoras/andalucia/cordoba/noticias/cordobesa-vello-expande-internacionalmente_2024091666e8199fb3741e0001e7b2a3.html\" target=\"_blank\" rel=\"noopener\">\n      <img src=\"https://cdn.shopify.com/s/files/1/0884/5865/8056/files/Onda_Cero_logo_svg.png?v=1754565093\" alt=\"Onda Cero\" />\n    </a>\n    <a href=\"https://www.businessinsider.es/branded/salvador-raya-ceo-sinvello-exito-franquicia-supervision-control-procesos-1447287\" target=\"_blank\" rel=\"noopener\">\n      <img src=\"https://cdn.shopify.com/s/files/1/0884/5865/8056/files/descarga_1.png?v=1754565093\" alt=\"Business Insider\" />\n    </a>\n    <a href=\"https://www.eleconomista.es/retail-consumo/noticias/12357981/07/23/sin-vello-duplica-su-tamano-y-alcanzara-los-100-centros-este-ano.html\" target=\"_blank\" rel=\"noopener\">\n      <img src=\"https://cdn.shopify.com/s/files/1/0884/5865/8056/files/descarga_2.png?v=1754565092\" alt=\"El Economista\" />\n    </a>\n    <a href=\"https://cordopolis.eldiario.es/empresa/vinuela-milan-sinvello-revolucion-laser-cordobesa-expande-mundo_1_12289756.html\" target=\"_blank\" rel=\"noopener\">\n      <img src=\"https://cdn.shopify.com/s/files/1/0884/5865/8056/files/logo-web-cordopolis.h-b4700b8b11bf19bcf4de2271b6ad3d08.png?v=1754565442\" alt=\"Cordópolis\" />\n    </a>\n    <a href=\"https://emprendedores.es/franquicias/entrevista-salvador-raya-ceo-sinvello-2024/\" target=\"_blank\" rel=\"noopener\">\n      <img src=\"https://cdn.shopify.com/s/files/1/0884/5865/8056/files/revista-emprendedores.jpg?v=1754565539\" alt=\"Emprendedores\" />\n    </a>\n    <a href=\"https://www.cordobabn.com/articulo/cordoba/cordobesa-sinvello-termina-2023-mas-100-centros-toda-espana/20231228130039182039.html\" target=\"_blank\" rel=\"noopener\">\n      <img src=\"https://cdn.shopify.com/s/files/1/0884/5865/8056/files/descarga_2.jpg?v=1754565605\" alt=\"Córdoba Buenas Noticias\" />\n    </a>\n\n    <!-- Duplicado para scroll continuo -->\n    <a href=\"https://www.abc.es/content-local/sin-vello-180-centros/\" target=\"_blank\" rel=\"noopener\">\n      <img src=\"https://cdn.shopify.com/s/files/1/0884/5865/8056/files/descarga_3.png?v=1754565129\" alt=\"ABC\" />\n    </a>\n    <a href=\"https://www.ondacero.es/emisoras/andalucia/cordoba/noticias/cordobesa-vello-expande-internacionalmente_2024091666e8199fb3741e0001e7b2a3.html\" target=\"_blank\" rel=\"noopener\">\n      <img src=\"https://cdn.shopify.com/s/files/1/0884/5865/8056/files/Onda_Cero_logo_svg.png?v=1754565093\" alt=\"Onda Cero\" />\n    </a>\n    <a href=\"https://www.businessinsider.es/branded/salvador-raya-ceo-sinvello-exito-franquicia-supervision-control-procesos-1447287\" target=\"_blank\" rel=\"noopener\">\n      <img src=\"https://cdn.shopify.com/s/files/1/0884/5865/8056/files/descarga_1.png?v=1754565093\" alt=\"Business Insider\" />\n    </a>\n    <a href=\"https://www.eleconomista.es/retail-consumo/noticias/12357981/07/23/sin-vello-duplica-su-tamano-y-alcanzara-los-100-centros-este-ano.html\" target=\"_blank\" rel=\"noopener\">\n      <img src=\"https://cdn.shopify.com/s/files/1/0884/5865/8056/files/descarga_2.png?v=1754565092\" alt=\"El Economista\" />\n    </a>\n    <a href=\"https://cordopolis.eldiario.es/empresa/vinuela-milan-sinvello-revolucion-laser-cordobesa-expande-mundo_1_12289756.html\" target=\"_blank\" rel=\"noopener\">\n      <img src=\"https://cdn.shopify.com/s/files/1/0884/5865/8056/files/logo-web-cordopolis.h-b4700b8b11bf19bcf4de2271b6ad3d08.png?v=1754565442\" alt=\"Cordópolis\" />\n    </a>\n    <a href=\"https://emprendedores.es/franquicias/entrevista-salvador-raya-ceo-sinvello-2024/\" target=\"_blank\" rel=\"noopener\">\n      <img src=\"https://cdn.shopify.com/s/files/1/0884/5865/8056/files/revista-emprendedores.jpg?v=1754565539\" alt=\"Emprendedores\" />\n    </a>\n    <a href=\"https://www.cordobabn.com/articulo/cordoba/cordobesa-sinvello-termina-2023-mas-100-centros-toda-espana/20231228130039182039.html\" target=\"_blank\" rel=\"noopener\">\n      <img src=\"https://cdn.shopify.com/s/files/1/0884/5865/8056/files/descarga_2.jpg?v=1754565605\" alt=\"Córdoba Buenas Noticias\" />\n    </a>\n  </div>\n</div>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    }
+  },
+  "order": [
+    "main",
+    "rich_text_pwiqR9",
+    "custom_liquid_GirxPY",
+    "video_bFYJz3",
+    "rich_text_PzPB8p",
+    "custom_liquid_bCteAt",
+    "custom_liquid_7FaTq7",
+    "00_custom_team_CpgLB3",
+    "image_with_text_iVEYdT",
+    "multicolumn_eNDEFT",
+    "custom_liquid_3GKBYN"
+  ]
+}

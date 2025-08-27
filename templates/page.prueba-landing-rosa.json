@@ -168,8 +168,8 @@
           "type": "women_offer",
           "settings": {
             "title": "PIERNAS COMPLETAS + INGLES COMPLETAS + AXILAS",
-            "regular_price": "50",
-            "sale_price": "35",
+            "regular_price": "42",
+            "sale_price": "30",
             "link": ""
           }
         },
@@ -185,9 +185,9 @@
         "men_offer_T8wTim": {
           "type": "men_offer",
           "settings": {
-            "title": "AXILAS + INGLES NORMALES + PERIANAL",
-            "regular_price": "35",
-            "sale_price": "25",
+            "title": "PIERNAS + GLÚTEOS + PERIANAL",
+            "regular_price": "50",
+            "sale_price": "40",
             "link": ""
           }
         },
@@ -196,7 +196,7 @@
           "settings": {
             "title": "ESPALDA + TÓRAX + HOMBROS",
             "regular_price": "60",
-            "sale_price": "50",
+            "sale_price": "48",
             "link": ""
           }
         },
@@ -205,7 +205,7 @@
           "settings": {
             "title": "CUERPO COMPLETO",
             "regular_price": "110",
-            "sale_price": "80",
+            "sale_price": "60",
             "link": ""
           }
         }
@@ -241,7 +241,6 @@
       "block_order": [
         "button_YTGV6T"
       ],
-      "disabled": true,
       "custom_css": [
         ".button {background-color: transparent; border: 2px solid; padding: 1.5rem 7rem; font-size: 1.8rem;}"
       ],
@@ -284,7 +283,6 @@
         "faq_item_KatkRh",
         "faq_item_aAJpHQ"
       ],
-      "disabled": true,
       "custom_css": [
         "h2 {color: var(--custom-rosa); text-align: start; font-size: clamp(3.6rem, 10vi, 5.6rem); max-width: 650px;}",
         "h2 strong {color: #000;}"
@@ -301,7 +299,6 @@
       "blocks": {
         "button_T8QykN": {
           "type": "button",
-          "disabled": true,
           "settings": {
             "button_label": "ELIGE TU CUPÓN DESCUENTO",
             "button_link": "shopify://pages/cupon",
@@ -315,7 +312,6 @@
       "block_order": [
         "button_T8QykN"
       ],
-      "disabled": true,
       "custom_css": [
         ".button {border: 2px solid; padding: 1.5rem 7rem; font-size: 1.8rem;}"
       ],

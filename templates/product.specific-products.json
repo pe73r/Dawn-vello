@@ -22,11 +22,10 @@
         },
         "icon_with_text_3LdmHb": {
           "type": "icon-with-text",
-          "disabled": true,
           "settings": {
             "layout": "vertical",
             "icon_1": "check_mark",
-            "heading_1": "<strong>ATENCÓN: SOLO PARA NUEVOS CLIENTES</strong>",
+            "heading_1": "<strong>ATENCIÓN: SOLO PARA NUEVOS CLIENTES</strong>",
             "icon_2": "none",
             "heading_2": "",
             "icon_3": "none",
@@ -134,7 +133,7 @@
         "padding_bottom": 100
       }
     },
-    "custom_liquid_RCbA4V": {
+    "custom_liquid_MRkC8e": {
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
@@ -148,6 +147,6 @@
   "order": [
     "main",
     "related-products",
-    "custom_liquid_RCbA4V"
+    "custom_liquid_MRkC8e"
   ]
 }

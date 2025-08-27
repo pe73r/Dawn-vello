@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin language editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "settings_schema": {
     "global": {
@@ -3415,6 +3424,24 @@
       },
       "presets": {
         "name": "Collapsible content"
+      }
+    }
+  },
+  "theme_support": {
+    "settings": {
+      "product-card": {
+        "variant_information": {
+          "content": "Variant information"
+        },
+        "show_variant_options": {
+          "label": "Show available options"
+        },
+        "enable_variant_options_hover": {
+          "label": "Show options on hover"
+        },
+        "show_variant_options_sold_out": {
+          "label": "Show on sold out products"
+        }
       }
     }
   }

@@ -50,14 +50,33 @@
       ],
       "settings": {}
     },
-    "custom_liquid_eXGHgm": {
-      "type": "custom-liquid",
-      "name": "t:sections.custom-liquid.presets.name",
+    "featured_collection_TH8XxP": {
+      "type": "featured-collection",
+      "name": "t:sections.featured-collection.presets.name",
       "settings": {
-        "custom_liquid": "{% assign carousel_handles = \"\" %}\n{% assign show_collection_carousel = false %}\n\n{% case article.title %}\n\n  {% when \"Granos en las ingles: qué son y cómo eliminarlos\" %}\n    {% assign carousel_handles = \"oferta-de-bienvenida-mujer-ingles-completas-y-axilas,linea-alba-mujer-junio,zona-perianal-mujer-junio,oferta-de-bienvenida-hombre-axilas-ingles-completas-y-perianal\" %}\n\n  {% when \"¿Cuál es el mejor método para depilarse las orejas?\" %}\n    {% assign carousel_handles = \"orejas-hombre-junio,facial-completo-mujer-junio,entrecejo-hombre-junio,patillas-mujer-junio\" %}\n\n  {% when \"Es bueno depilarse los genitales masculinos: Todo lo que debes saber\" %}\n    {% assign carousel_handles = \"oferta-de-bienvenida-hombre-axilas-ingles-completas-y-perianal,pack-descuento-hombre-medio-cuerpo-inferior,oferta-de-bienvenida-hombre-axilas-ingles-completas-y-perianal,ingles-completas-hombre-junio\" %}\n\n  {% else %}\n    {% assign show_collection_carousel = true %}\n{% endcase %}\n\n{% if carousel_handles != \"\" %}\n  {% assign handles = carousel_handles | split: \",\" %}\n  <div style=\"overflow-x: auto; display: flex; gap: 16px; padding: 16px 0;\">\n    {% for handle in handles %}\n      {% assign product = all_products[handle] %}\n      {% if product %}\n        <div style=\"width: 220px; flex: 0 0 auto; text-align: center;\">\n          <a href=\"{{ product.url }}\" style=\"text-decoration: none; color: inherit; display: block;\">\n            <div style=\"width: 220px; height: 220px; overflow: hidden; border-radius: 8px;\">\n              <img src=\"{{ product.featured_image | image_url: width: 300 }}\" alt=\"{{ product.title }}\" style=\"width: 100%; height: 100%; object-fit: cover;\">\n            </div>\n            <h4 style=\"margin-top: 8px; margin-bottom: 4px;\">{{ product.title }}</h4>\n            <p style=\"font-weight: bold; margin: 0;\">{{ product.price | money }}</p>\n          </a>\n        </div>\n      {% endif %}\n    {% endfor %}\n  </div>\n\n{% elsif show_collection_carousel %}\n  {% assign collection_handle = \"ofertas-del-mes-1\" %}\n  {% assign collection = collections[collection_handle] %}\n  {% if collection.products.size > 0 %}\n    <div style=\"overflow-x: auto; display: flex; gap: 16px; padding: 16px 0;\">\n      {% for product in collection.products %}\n        <div style=\"width: 220px; flex: 0 0 auto; text-align: center;\">\n          <a href=\"{{ product.url }}\" style=\"text-decoration: none; color: inherit; display: block;\">\n            <div style=\"width: 220px; height: 220px; overflow: hidden; border-radius: 8px;\">\n              <img src=\"{{ product.featured_image | image_url: width: 300 }}\" alt=\"{{ product.title }}\" style=\"width: 100%; height: 100%; object-fit: cover;\">\n            </div>\n            <h4 style=\"margin-top: 8px; margin-bottom: 4px;\">{{ product.title }}</h4>\n            <p style=\"font-weight: bold; margin: 0;\">{{ product.price | money }}</p>\n          </a>\n        </div>\n      {% endfor %}\n    </div>\n  {% endif %}\n{% endif %}",
+        "title": "",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "{{ article.metafields.custom.coleccion.value }}",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
         "color_scheme": "",
-        "padding_top": 40,
-        "padding_bottom": 52
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "multicolumn_DjJtXc": {
@@ -116,7 +135,7 @@
   },
   "order": [
     "main",
-    "custom_liquid_eXGHgm",
+    "featured_collection_TH8XxP",
     "multicolumn_DjJtXc"
   ]
 }

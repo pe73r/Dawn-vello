@@ -9,6 +9,41 @@
  */
 {
   "sections": {
+    "1743079306949338be": {
+      "type": "apps",
+      "blocks": {
+        "slider_revolution_slider_general_R76Lci": {
+          "type": "shopify://apps/slider-revolution/blocks/slider_general/d2c2325b-ecb9-42b8-a0b0-ca2ffb6e3203",
+          "settings": {
+            "slider_id": "sinvello-junio"
+          }
+        }
+      },
+      "block_order": [
+        "slider_revolution_slider_general_R76Lci"
+      ],
+      "custom_css": [],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "apps_9nCxAb": {
+      "type": "apps",
+      "blocks": {
+        "slider_revolution_slider_general_RKzc4b": {
+          "type": "shopify://apps/slider-revolution/blocks/slider_general/d2c2325b-ecb9-42b8-a0b0-ca2ffb6e3203",
+          "settings": {
+            "slider_id": "sinvello-junio"
+          }
+        }
+      },
+      "block_order": [
+        "slider_revolution_slider_general_RKzc4b"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
     "rich_text_h1_PDVATh": {
       "type": "rich-text-h1",
       "blocks": {
@@ -54,6 +89,7 @@
     },
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "padding_top": 28,
         "padding_bottom": 28
@@ -61,12 +97,15 @@
     },
     "1732104436f2dd822f": {
       "type": "apps",
+      "disabled": true,
       "settings": {
         "include_margins": true
       }
     }
   },
   "order": [
+    "1743079306949338be",
+    "apps_9nCxAb",
     "rich_text_h1_PDVATh",
     "main",
     "1732104436f2dd822f"

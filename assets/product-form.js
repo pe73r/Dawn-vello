@@ -9,7 +9,7 @@ if (!customElements.get('product-form')) {
         this.variantIdInput.disabled = false;
         this.form.addEventListener('submit', this.onSubmitHandler.bind(this));
         this.cart = document.querySelector('cart-notification') || document.querySelector('cart-drawer');
-        this.submitButton = this.querySelector('[type="submit"]');
+        this.submitButton = this.querySelector('.submit-btn');
         this.submitButtonText = this.submitButton.querySelector('span');
 
         if (document.querySelector('cart-drawer')) this.submitButton.setAttribute('aria-haspopup', 'dialog');
@@ -18,6 +18,10 @@ if (!customElements.get('product-form')) {
       }
 
       onSubmitHandler(evt) {
+        if(!this.querySelector('#centro') || this.querySelector('#centro').value == ""  || this.querySelector('#centro').value == "SELECCIONA TU CENTRO"){
+          console.log("CENTRO")
+          return;
+        } 
         evt.preventDefault();
         if (this.submitButton.getAttribute('aria-disabled') === 'true') return;
 

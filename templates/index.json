@@ -1,1 +1,484 @@
-{"sections":{"00_custom_slider_form_jr7AJd":{"type":"00-custom-slider-form","blocks":{"slide_myB9kQ":{"type":"slide","disabled":true,"settings":{"image":"shopify:\/\/shop_images\/1600x700-02.jpg","heading":"Precios de bienvenida <strong>desde solo 6€<\/strong>","heading_size":"h0","subheading":"","button_label":"ACCEDE A LAS OFERTAS","link":"shopify:\/\/collections\/oferta-de-bienvenida-mujer-home","button_style_secondary":false,"box_align":"middle-left","show_text_box":false,"text_alignment":"center","image_overlay_opacity":0,"color_scheme":"scheme-61c7d82a-9edb-45dc-912f-d8acc8e2bf2f","text_alignment_mobile":"center"}},"slide_GV9dbW":{"type":"slide","disabled":true,"settings":{"image":"shopify:\/\/shop_images\/1600x700-01_ac08eb96-7a8a-4f3b-abbd-29f22a90a62f.jpg","heading":"Depilación láser diodo másculina <strong>desde solo 6€<\/strong>","heading_size":"h0","subheading":"","button_label":"ACCEDE A LAS OFERTAS","link":"shopify:\/\/collections\/oferta-de-bienvenida-hombres","button_style_secondary":false,"box_align":"middle-left","show_text_box":false,"text_alignment":"center","image_overlay_opacity":0,"color_scheme":"scheme-2","text_alignment_mobile":"center"}},"slide_7DXmdL":{"type":"slide","settings":{"image":"shopify:\/\/shop_images\/Banner_ofertas_del_mes_diciembre.png","heading":"EN DICIEMBRE, <\/BR> DESCUENTAZOS COMO <\/BR> EN <strong>BLACK FRIDAY<\/strong>","heading_size":"h1","subheading":"","button_label":"ACCEDE A LAS OFERTAS","link":"shopify:\/\/collections\/ofertas-del-mes","button_style_secondary":false,"box_align":"middle-left","show_text_box":false,"text_alignment":"center","image_overlay_opacity":0,"color_scheme":"scheme-b2a474ba-194c-4086-912f-a14dadfe75dd","text_alignment_mobile":"center"}},"form_HXFhy6":{"type":"form","disabled":true,"settings":{"form_title":"¡Pide tu cita!","form_description":"","button_text":"PEDIR CITA","name_placeholder":"Nombre*","phone_placeholder":"Teléfono*","email_placeholder":"Email*","province_placeholder":"Provincia*","center_placeholder":"Centro*","consent_url":"","consent_text":"He leído y estoy de acuerdi con la","consent_anchor_text":"política de privacidad"}},"slide_czMPki":{"type":"slide","disabled":true,"settings":{"image":"shopify:\/\/shop_images\/cabecera-home-01.jpg","heading":"¡En diciembre, más descuentazos!","heading_size":"hxxl","subheading":"","button_label":"Ver Ofertas de iciembre","link":"shopify:\/\/collections\/ofertas-del-mes","button_style_secondary":false,"box_align":"middle-left","show_text_box":false,"text_alignment":"center","image_overlay_opacity":0,"color_scheme":"scheme-b2a474ba-194c-4086-912f-a14dadfe75dd","text_alignment_mobile":"center"}}},"block_order":["slide_myB9kQ","slide_GV9dbW","slide_7DXmdL","form_HXFhy6","slide_czMPki"],"custom_css":[".slider {padding: 0;}",".media {position: absolute;}",".banner__content {max-width: 100%;}","@media screen and (max-width: 768px) {.media {position: relative; aspect-ratio: 4 \/ 5; }}"],"settings":{"layout":"full_bleed","slide_height":"adapt_image","slider_visual":"dots","auto_rotate":false,"change_slides_speed":3,"image_behavior":"none","show_text_below":true,"accessibility_info":"Slideshow about our brand"}},"featured_collection_LmriHU":{"type":"featured-collection","custom_css":[".title {text-align: center;}",".title strong {display: block; line-height: 0.9;}",".subtitle {font-size: 1.8em;}","li {padding: 0;}",".porcent {color: #fff; background-color: var(--custom-blau); padding: 0.5rem; border-bottom-right-radius: 5px; font-weight: bold;}",".collection .button--secondary {font-size: 12px; padding: 0rem 1rem; min-width: auto; background-color: var(--custom-blau); border-radius: 5px; color: #fff; margin: 1rem auto !important; min-height: 30px;}",".button:after {border-radius: 5px; border: none !important; box-shadow: none !important;}"],"settings":{"title":"OFERTAS <strong>DE DICIEMBRE<\/strong>","heading_size":"hxl","description":"<p><strong>¡Unidades limitadas!<\/strong><\/p>","show_description":false,"description_style":"subtitle","collection":"ofertas-del-mes","products_to_show":20,"columns_desktop":4,"full_width":false,"show_view_all":true,"view_all_style":"solid","enable_desktop_slider":true,"color_scheme":"scheme-2","image_ratio":"adapt","image_shape":"default","show_secondary_image":false,"show_vendor":false,"show_rating":false,"quick_add":"none","columns_mobile":"2","swipe_on_mobile":true,"padding_top":100,"padding_bottom":100}},"multicolumn_VqJGgp":{"type":"multicolumn","blocks":{"column_NKCtJ9":{"type":"column","settings":{"image":"shopify:\/\/shop_images\/tienda-mujer.png","title":"TIENDA<strong> MUJER<\/strong>","text":"","link_label":"IR A LA TIENDA","link":"https:\/\/sinvelloporlaser.es\/collections\/tienda-online?filter.p.tag=Mujer"}},"column_9ENtji":{"type":"column","settings":{"image":"shopify:\/\/shop_images\/tienda-hombre.png","title":"TIENDA <strong>HOMBRE<\/strong>","text":"","link_label":"IR A LA TIENDA","link":"https:\/\/sinvelloporlaser.es\/collections\/tienda-online?filter.p.tag=Hombre"}}},"block_order":["column_NKCtJ9","column_9ENtji"],"custom_css":[".multicolumn > div {width: 100%; max-width: 100%; padding: 0;}",".multicolumn ul {gap: 0; width: 100%; display: grid; grid-template-columns: 50% 50%; padding: 0;}",".multicolumn li {max-width: 100%; width: 100%;}",".multicolumn-card__info {position: absolute; bottom: 3rem; width: 100%; background-color: #ffffffad;}","h3 {font-size: 4em;}","li:nth-child(2) h3 {color: var(--custom-blau);}","li .link {background-color: var(--custom-rosa); color: #fff; font-size: 1.2em; padding: 1.5rem 6rem;}","li:nth-child(2) .link {background: var(--custom-gradient);}"],"settings":{"title":"","heading_size":"hxxl","image_width":"full","image_ratio":"portrait","columns_desktop":2,"column_alignment":"center","background_style":"none","button_label":"","button_link":"","color_scheme":"scheme-61c7d82a-9edb-45dc-912f-d8acc8e2bf2f","columns_mobile":"1","swipe_on_mobile":false,"padding_top":36,"padding_bottom":36}},"featured_collection_pFtdMy":{"type":"featured-collection","disabled":true,"custom_css":[".title {text-align: center;}",".title strong {display: block; line-height: 0.9;}",".subtitle {font-size: 1.8em;}","li {padding: 0;}",".porcent {color: #fff; background-color: var(--custom-blau); padding: 0.5rem; border-bottom-right-radius: 5px; font-weight: bold;}",".collection .button--secondary {font-size: 12px; padding: 0rem 1rem; min-width: auto; background-color: var(--custom-blau); border-radius: 5px; color: #fff; margin: 1rem auto !important; min-height: 30px;}",".button:after {border-radius: 5px; border: none !important; box-shadow: none !important;}"],"settings":{"title":"OFERTAS<strong> BLACK FRIDAY<\/strong>","heading_size":"hxl","description":"<p>Del 25-11 al 2-12<\/p><p><strong>¡Unidades limitadas!<\/strong><\/p>","show_description":false,"description_style":"subtitle","collection":"black-friday","products_to_show":20,"columns_desktop":4,"full_width":false,"show_view_all":false,"view_all_style":"solid","enable_desktop_slider":true,"color_scheme":"scheme-2","image_ratio":"adapt","image_shape":"default","show_secondary_image":false,"show_vendor":false,"show_rating":false,"quick_add":"none","columns_mobile":"2","swipe_on_mobile":true,"padding_top":100,"padding_bottom":100}},"featured_collection_YEQbg9":{"type":"featured-collection","custom_css":[".title {text-align: center;}",".title strong {display: block; line-height: 0.8;}",".subtitle {font-size: 1.8em;}","li {padding: 0;}",".porcent {color: #fff; background-color: var(--custom-blau); padding: 0.5rem; border-bottom-right-radius: 5px; font-weight: bold;}",".collection .button--secondary {font-size: 12px; padding: 0rem 1rem; min-width: auto; background-color: var(--custom-blau); border-radius: 5px; color: #fff; margin: 1rem auto !important; min-height: 30px;}",".button:after {border-radius: 5px; border: none !important; box-shadow: none !important;}"],"settings":{"title":"OFERTAS DE BIENVENIDA <strong>MUJER<\/strong>","heading_size":"h1","description":"<p><strong>¡LOS MÁS VENDIDOS!<\/strong><\/p>","show_description":false,"description_style":"subtitle","collection":"oferta-de-bienvenida-mujer-home","products_to_show":8,"columns_desktop":4,"full_width":false,"show_view_all":true,"view_all_style":"solid","enable_desktop_slider":true,"color_scheme":"scheme-61c7d82a-9edb-45dc-912f-d8acc8e2bf2f","image_ratio":"adapt","image_shape":"default","show_secondary_image":false,"show_vendor":false,"show_rating":false,"quick_add":"none","columns_mobile":"1","swipe_on_mobile":true,"padding_top":100,"padding_bottom":100}},"rich_text_B8hhFA":{"type":"rich-text","blocks":{"heading_88zcCa":{"type":"heading","settings":{"heading":"<strong>Depilación<\/strong> láser","heading_size":"h0"}},"heading_XCqApJ":{"type":"heading","settings":{"heading":"¡Vive una experiencia premium!","heading_size":"h1"}},"text_e8pqG6":{"type":"text","settings":{"text":"<p>En SinVello! somos expertos en garantizarte una experiencia premium en <strong>depilación láser diodo<\/strong> al mejor precio.<\/p><p>Ponemos a tu disposición<strong> la aparatología más potente<\/strong> en manos de un equipo de profesionales que te asesorarán desde el primer momento para que consigas una piel lisa, suave y SinVello!<\/p><p><strong>Con más de 150 centros en la península, <\/strong>somos marca de referencia reconocida por nuestra innovación tecnológica y valores que colocan a nuestra clientela siempre primero y siempre en el centro.<\/p><p><\/p>"}}},"block_order":["heading_88zcCa","heading_XCqApJ","text_e8pqG6"],"disabled":true,"custom_css":["h2 strong {text-wrap: nowrap;}"],"settings":{"desktop_content_position":"center","content_alignment":"center","color_scheme":"scheme-311a7f12-de7f-4bb2-98a1-31411433d0fb","full_width":true,"padding_top":100,"padding_bottom":92}},"featured_collection_eCdyjT":{"type":"featured-collection","custom_css":[".title {text-align: center;}",".title strong {display: block; line-height: 0.8;}",".subtitle {font-size: 1.8em;}","li {padding: 0;}",".porcent {color: #fff; background-color: var(--custom-blau); padding: 0.5rem; border-bottom-right-radius: 5px; font-weight: bold;}",".collection .button--secondary {font-size: 12px; padding: 0rem 1rem; min-width: auto; background-color: var(--custom-blau); border-radius: 5px; color: #fff; margin: 1rem auto !important; min-height: 30px;}",".button:after {border-radius: 5px; border: none !important; box-shadow: none !important;}"],"settings":{"title":"OFERTAS DE BIENVENIDA <strong> HOMBRES<\/strong>","heading_size":"h1","description":"<p><strong>¡LOS MÁS VENDIDOS!<\/strong><\/p>","show_description":false,"description_style":"subtitle","collection":"oferta-de-bienvenida-hombres","products_to_show":8,"columns_desktop":4,"full_width":false,"show_view_all":true,"view_all_style":"solid","enable_desktop_slider":true,"color_scheme":"scheme-61c7d82a-9edb-45dc-912f-d8acc8e2bf2f","image_ratio":"adapt","image_shape":"default","show_secondary_image":false,"show_vendor":false,"show_rating":false,"quick_add":"none","columns_mobile":"1","swipe_on_mobile":true,"padding_top":100,"padding_bottom":100}},"multicolumn_6BjLmj":{"type":"multicolumn","blocks":{"column_mqAtm7":{"type":"column","settings":{"title":"MÁS DE<strong> 150 CENTROS<\/strong>","text":"<p>en toda españa<\/p>","link_label":"ENCUENTRA TU CENTRO","link":"shopify:\/\/pages\/encuentra-tu-centro"}},"column_QHXUDD":{"type":"column","settings":{"image":"shopify:\/\/shop_images\/madrid.jpg","title":"","text":"","link_label":"DEPILACIÓN LÁSER MADRID","link":"shopify:\/\/metaobjects\/provincia\/madrid"}},"column_fLdwMF":{"type":"column","settings":{"image":"shopify:\/\/shop_images\/barcelona.jpg","title":"","text":"","link_label":"DEPILACIÓN LÁSER BARCELONA","link":"shopify:\/\/metaobjects\/provincia\/barcelona"}},"column_db76JJ":{"type":"column","settings":{"image":"shopify:\/\/shop_images\/sevilla.jpg","title":"","text":"","link_label":"DEPILACIÓN LÁSER SEVILLA","link":"shopify:\/\/metaobjects\/provincia\/sevilla"}}},"block_order":["column_mqAtm7","column_QHXUDD","column_fLdwMF","column_db76JJ"],"custom_css":[".multicolumn-list li:nth-child(1) h3 {font-size: 3.8em; text-align: start; line-height: 1;}",".multicolumn-list li:nth-child(1) .rte {color: var(--custom-blau); font-size: 1.8em; text-align: start;}",".multicolumn-list li:nth-child(1) .link {color: #fff; border: none; background: var(--custom-gradient); padding: 1.75rem 2rem; margin: 2rem 0;}",".multicolumn-list li:nth-child(1) .multicolumn-card__info {text-align: start;}","img {border-radius: 3rem;}",".link {border-color: var(--custom-rosa);}"],"settings":{"title":"","heading_size":"hxl","image_width":"full","image_ratio":"adapt","columns_desktop":4,"column_alignment":"center","background_style":"none","button_label":"","button_link":"","color_scheme":"scheme-b2a474ba-194c-4086-912f-a14dadfe75dd","columns_mobile":"1","swipe_on_mobile":true,"padding_top":100,"padding_bottom":100}},"image_with_text_CHHaYe":{"type":"image-with-text","blocks":{"heading_b77njy":{"type":"heading","settings":{"heading":"VIVE UNA<strong> EXPERIENCIA PREMIUM<\/strong>","heading_size":"hxl"}},"text_MxtVLb":{"type":"text","settings":{"text":"<h2>en Depilación Láser Díodo<\/h2>","text_style":"subtitle"}},"button_GHYwBn":{"type":"button","settings":{"button_label":"SABER MÁS","button_link":"shopify:\/\/collections\/productes","button_style_secondary":true}}},"block_order":["heading_b77njy","text_MxtVLb","button_GHYwBn"],"disabled":true,"custom_css":["h2 {width: 80%;}",".subtitle {width: 100%;}","@media (max-width: 768px) {h2 {width: 100%; } .image-with-text__content {padding: 4rem 1rem 5rem; }}",".button--secondary {font-size: 1.3em; padding: 1.5rem 6rem; border: 2px solid;}",".image-with-text__media-item {width: 40%;}"],"settings":{"image":"shopify:\/\/shop_images\/vive-una-experiencia-premium.jpg","height":"medium","desktop_image_width":"small","layout":"image_first","desktop_content_position":"middle","desktop_content_alignment":"left","content_layout":"no-overlap","section_color_scheme":"scheme-1","color_scheme":"scheme-311a7f12-de7f-4bb2-98a1-31411433d0fb","image_behavior":"none","mobile_content_alignment":"center","padding_top":36,"padding_bottom":36}},"featured_collection_3UX8tW":{"type":"featured-collection","disabled":true,"custom_css":[".title {text-align: center;}",".subtitle {color: #fff; margin: 0; font-size: 1.8em; line-height: 0.8; margin-bottom: 5rem;}","li {padding: 0;}",".collection .button--secondary {font-size: 12px; padding: 0rem 1rem; min-width: auto; background-color: var(--custom-blau); border-radius: 5px; color: #fff; margin: 1rem auto !important; min-height: 30px;}",".button:after {border-radius: 5px; border: none !important; box-shadow: none !important;}"],"settings":{"title":"PACKS DESCUENTO <strong> MUJERES<\/strong>","heading_size":"h1","description":"<p>¡Combina zonas y ahorra!<\/p>","show_description":false,"description_style":"subtitle","collection":"packs-descuento-mujeres","products_to_show":6,"columns_desktop":3,"full_width":false,"show_view_all":true,"view_all_style":"solid","enable_desktop_slider":true,"color_scheme":"scheme-b0774bf8-c2c2-4037-8ce5-b30d44cf32c8","image_ratio":"adapt","image_shape":"default","show_secondary_image":false,"show_vendor":false,"show_rating":false,"quick_add":"none","columns_mobile":"1","swipe_on_mobile":true,"padding_top":36,"padding_bottom":36}},"featured_collection_btzTXU":{"type":"featured-collection","disabled":true,"custom_css":[".title {text-align: center;}",".subtitle {color: #fff; margin: 0; font-size: 1.8em; line-height: 0.8; margin-bottom: 5rem;}","li {padding: 0;}",".collection .button--secondary {font-size: 12px; padding: 0rem 1rem; min-width: auto; background-color: var(--custom-blau); border-radius: 5px; color: #fff; margin: 1rem auto !important; min-height: 30px;}",".button:after {border-radius: 5px; border: none !important; box-shadow: none !important;}"],"settings":{"title":"PACKS DESCUENTO <strong>  HOMBRES<\/strong>","heading_size":"h0","description":"<p>¡Combina zonas y ahorra!<\/p>","show_description":false,"description_style":"subtitle","collection":"packs-descuento-hombres","products_to_show":6,"columns_desktop":3,"full_width":false,"show_view_all":true,"view_all_style":"solid","enable_desktop_slider":true,"color_scheme":"scheme-b0774bf8-c2c2-4037-8ce5-b30d44cf32c8","image_ratio":"adapt","image_shape":"default","show_secondary_image":false,"show_vendor":false,"show_rating":false,"quick_add":"none","columns_mobile":"1","swipe_on_mobile":true,"padding_top":36,"padding_bottom":36}},"multicolumn_MHaFXR":{"type":"multicolumn","blocks":{"column_gJ7mWB":{"type":"column","settings":{"image":"shopify:\/\/shop_images\/depilacion-mujer.png","title":"DEPILACIÓN LÁSER<strong> MUJER<\/strong>","text":"<p>La depilación láser diodo más efectiva al mejor precio. Olvídate para siempre de ceras y cuchillas y ahorra tiempo y dinero.<\/p>","link_label":"SABER MÁS","link":"shopify:\/\/pages\/depilacion-laser-mujer"}},"column_MTHmn3":{"type":"column","settings":{"image":"shopify:\/\/shop_images\/depilacion-hombre.png","title":"DEPILACIÓN LÁSER<strong> HOMBRE<\/strong>","text":"<p>La depilación láser diodo para hombres con resultados permanentes demostrados. Prácticamente indolora y efectiva sobre todo tipo de pieles.<\/p>","link_label":"SABER MÁS","link":"shopify:\/\/pages\/depilacion-laser-hombre"}}},"block_order":["column_gJ7mWB","column_MTHmn3"],"custom_css":[".title {text-align: center; width: 100%;}",".link {border-color: var(--custom-rosa);}","li:nth-child(2) * {color: var(--custom-blau); border-color: var(--custom-blau);}",".multicolumn > div {max-width: 1200px;}",".multicolumn-card__info {background-color: #fff; border-radius: 4rem; padding: 3rem 8rem;}",".multicolumn-card__info h3 {font-size: 2em;}",".multicolumn-card__info h3 strong {display: block; line-height: 0.5;}",".rte {width: 80%; margin: 3rem auto;}","@media (max-width: 768px) {.multicolumn-card__info {padding: 3rem 1rem; }}"],"settings":{"title":"DEPILACIÓN <strong>LÁSER<\/strong>","heading_size":"hxl","image_width":"full","image_ratio":"adapt","columns_desktop":2,"column_alignment":"center","background_style":"none","button_label":"","button_link":"","color_scheme":"scheme-b2a474ba-194c-4086-912f-a14dadfe75dd","columns_mobile":"1","swipe_on_mobile":false,"padding_top":100,"padding_bottom":100}},"featured_blog_i7PG9F":{"type":"featured-blog","custom_css":["h2 {width: 100%; text-align: center;}","h2 strong {display: block;}","h3 {color: var(--custom-rosa);}",".media {border-radius: 3rem 3rem 0 0; overflow: hidden;}",".card {box-shadow: 0px 0px 5px 0px #ddd; border-radius: 3rem;}",".button {margin: 0 2rem 2rem; text-decoration: none; background-color: transparent; color: var(--custom-rosa); border: 2px solid var(--custom-rosa); padding: 1rem 5rem; width: fit-content;}",".button:hover::after {box-shadow: none;}"],"settings":{"heading":"¡EL RINCÓN DE<strong> SINVELLO!<\/strong>","heading_size":"hxl","blog":"news","post_limit":3,"columns_desktop":3,"color_scheme":"scheme-61c7d82a-9edb-45dc-912f-d8acc8e2bf2f","show_image":true,"show_date":false,"show_author":false,"show_view_all":true,"padding_top":100,"padding_bottom":100}},"rich_text_9D3Pem":{"type":"rich-text","blocks":{"heading_tT9FJK":{"type":"heading","settings":{"heading":"ENCUENTRA TU <strong>SINVELLO! <\/strong><\/BR>MÁS CERCANO","heading_size":"h0"}}},"block_order":["heading_tT9FJK"],"settings":{"desktop_content_position":"center","content_alignment":"center","color_scheme":"","full_width":true,"padding_top":40,"padding_bottom":52}},"172847137908252a37":{"type":"apps","blocks":{"progus_store_locator_app_block_keteac":{"type":"shopify:\/\/apps\/progus-store-locator\/blocks\/app-block\/d7896016-8cc9-45e0-860e-ba85ba3d5be4","settings":{}}},"block_order":["progus_store_locator_app_block_keteac"],"custom_css":[],"settings":{"include_margins":true}},"custom_liquid_JCJgbE":{"type":"custom-liquid","settings":{"custom_liquid":"","color_scheme":"","padding_top":40,"padding_bottom":40}},"collection_list_pXhWAe":{"type":"collection-list","blocks":{"featured_collection_hLaGxY":{"type":"featured_collection","settings":{"collection":"ofertas-de-bienvenida"}},"featured_collection_NgxGHd":{"type":"featured_collection","settings":{"collection":"ofertas-del-mes"}},"featured_collection_GUKNXX":{"type":"featured_collection","settings":{"collection":"paks"}}},"block_order":["featured_collection_hLaGxY","featured_collection_NgxGHd","featured_collection_GUKNXX"],"settings":{"title":"Nuestras promociones","heading_size":"h1","image_ratio":"square","columns_desktop":3,"color_scheme":"","show_view_all":false,"columns_mobile":"1","swipe_on_mobile":false,"padding_top":36,"padding_bottom":36}}},"order":["00_custom_slider_form_jr7AJd","featured_collection_LmriHU","multicolumn_VqJGgp","featured_collection_pFtdMy","collection_list_pXhWAe","featured_collection_YEQbg9","rich_text_B8hhFA","featured_collection_eCdyjT","multicolumn_6BjLmj","image_with_text_CHHaYe","featured_collection_3UX8tW","featured_collection_btzTXU","multicolumn_MHaFXR","featured_blog_i7PG9F","rich_text_9D3Pem","172847137908252a37","custom_liquid_JCJgbE"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "1746175889ca7f2e92": {
+      "type": "apps",
+      "blocks": {
+        "slider_revolution_slider_general_rWrCnq": {
+          "type": "shopify://apps/slider-revolution/blocks/slider_general/d2c2325b-ecb9-42b8-a0b0-ca2ffb6e3203",
+          "disabled": true,
+          "settings": {
+            "slider_id": "sinvello-junio",
+            "hide_on_desktop": false,
+            "hide_on_tablet": false,
+            "hide_on_mobile": false,
+            "rev_section_heading": "",
+            "rev_section_sub_heading": "",
+            "rev_section_heading_size": 30,
+            "rev_section_sub_heading_size": 15,
+            "rev_section_heading_align": "center",
+            "rev_section_heading_color": "",
+            "rev_section_sub_heading_color": "",
+            "rev_section_bg_color": "",
+            "rev_slider_sec_pad_top": 0,
+            "rev_slider_sec_pad_bot": 0,
+            "rev_slider_sec_mar_top": 0,
+            "rev_slider_sec_mar_bot": 0
+          }
+        }
+      },
+      "block_order": [
+        "slider_revolution_slider_general_rWrCnq"
+      ],
+      "disabled": true,
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "apps_FkVCww": {
+      "type": "apps",
+      "blocks": {
+        "slider_revolution_slider_general_Y9Taiy": {
+          "type": "shopify://apps/slider-revolution/blocks/slider_general/d2c2325b-ecb9-42b8-a0b0-ca2ffb6e3203",
+          "settings": {
+            "slider_id": "sinvello-julio",
+            "hide_on_desktop": false,
+            "hide_on_tablet": false,
+            "hide_on_mobile": false,
+            "rev_section_heading": "",
+            "rev_section_sub_heading": "",
+            "rev_section_heading_size": 30,
+            "rev_section_sub_heading_size": 15,
+            "rev_section_heading_align": "center",
+            "rev_section_heading_color": "",
+            "rev_section_sub_heading_color": "",
+            "rev_section_bg_color": "",
+            "rev_slider_sec_pad_top": 0,
+            "rev_slider_sec_pad_bot": 0,
+            "rev_slider_sec_mar_top": 0,
+            "rev_slider_sec_mar_bot": 0
+          }
+        }
+      },
+      "block_order": [
+        "slider_revolution_slider_general_Y9Taiy"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "featured_collection_LmriHU": {
+      "type": "featured-collection",
+      "custom_css": [
+        ".title {text-align: center;}",
+        ".title strong {display: block; line-height: 0.9;}",
+        ".subtitle {font-size: 1.8em;}",
+        "li {padding: 0;}",
+        ".porcent {color: #fff; background-color: var(--custom-blau); padding: 0.5rem; border-bottom-right-radius: 5px; font-weight: bold;}",
+        ".collection .button--secondary {font-size: 12px; padding: 0rem 1rem; min-width: auto; background-color: var(--custom-blau); border-radius: 5px; color: #fff; margin: 1rem auto !important; min-height: 30px;}",
+        ".button:after {border-radius: 5px; border: none !important; box-shadow: none !important;}"
+      ],
+      "settings": {
+        "title": "<strong>Últimos días de descuentos ¡corre! </strong>⏳",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "subtitle",
+        "collection": "ofertas-del-mes-1",
+        "products_to_show": 20,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": true,
+        "color_scheme": "scheme-b2a474ba-194c-4086-912f-a14dadfe75dd",
+        "image_ratio": "square",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_variant_options": true,
+        "enable_variant_options_hover": true,
+        "show_variant_options_sold_out": true,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 44,
+        "padding_bottom": 48
+      }
+    },
+    "featured_collection_YEQbg9": {
+      "type": "featured-collection",
+      "custom_css": [
+        ".title {text-align: center;}",
+        ".title strong {display: block; line-height: 0.8;}",
+        ".subtitle {font-size: 1.8em;}",
+        "li {padding: 0;}",
+        ".porcent {color: #fff; background-color: var(--custom-blau); padding: 0.5rem; border-bottom-right-radius: 5px; font-weight: bold;}",
+        ".collection .button--secondary {font-size: 12px; padding: 0rem 1rem; min-width: auto; background-color: var(--custom-blau); border-radius: 5px; color: #fff; margin: 1rem auto !important; min-height: 30px;}",
+        ".button:after {border-radius: 5px; border: none !important; box-shadow: none !important;}"
+      ],
+      "settings": {
+        "title": "OFERTAS DE BIENVENIDA <strong>MUJER</strong>",
+        "heading_size": "h1",
+        "description": "<p><strong>¡LOS MÁS VENDIDOS!</strong></p>",
+        "show_description": false,
+        "description_style": "subtitle",
+        "collection": "oferta-de-bienvenida-mujer-home",
+        "products_to_show": 8,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": true,
+        "color_scheme": "scheme-61c7d82a-9edb-45dc-912f-d8acc8e2bf2f",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_variant_options": true,
+        "enable_variant_options_hover": true,
+        "show_variant_options_sold_out": true,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 100,
+        "padding_bottom": 100
+      }
+    },
+    "featured_collection_eCdyjT": {
+      "type": "featured-collection",
+      "custom_css": [
+        ".title {text-align: center;}",
+        ".title strong {display: block; line-height: 0.8;}",
+        ".subtitle {font-size: 1.8em;}",
+        "li {padding: 0;}",
+        ".porcent {color: #fff; background-color: var(--custom-blau); padding: 0.5rem; border-bottom-right-radius: 5px; font-weight: bold;}",
+        ".collection .button--secondary {font-size: 12px; padding: 0rem 1rem; min-width: auto; background-color: var(--custom-blau); border-radius: 5px; color: #fff; margin: 1rem auto !important; min-height: 30px;}",
+        ".button:after {border-radius: 5px; border: none !important; box-shadow: none !important;}"
+      ],
+      "settings": {
+        "title": "OFERTAS DE BIENVENIDA <strong> HOMBRES</strong>",
+        "heading_size": "h1",
+        "description": "<p><strong>¡LOS MÁS VENDIDOS!</strong></p>",
+        "show_description": false,
+        "description_style": "subtitle",
+        "collection": "oferta-de-bienvenida-hombres",
+        "products_to_show": 8,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": true,
+        "color_scheme": "scheme-61c7d82a-9edb-45dc-912f-d8acc8e2bf2f",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_variant_options": true,
+        "enable_variant_options_hover": true,
+        "show_variant_options_sold_out": true,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 100,
+        "padding_bottom": 100
+      }
+    },
+    "multicolumn_VqJGgp": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_NKCtJ9": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/tienda-mujer.png",
+            "title": "TIENDA<strong> MUJER</strong>",
+            "text": "",
+            "link_label": "IR A LA TIENDA",
+            "link": "https://sinvelloporlaser.es/collections/tienda-online?filter.p.tag=Mujer"
+          }
+        },
+        "column_9ENtji": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/tienda-hombre.png",
+            "title": "TIENDA <strong>HOMBRE</strong>",
+            "text": "",
+            "link_label": "IR A LA TIENDA",
+            "link": "https://sinvelloporlaser.es/collections/tienda-online?filter.p.tag=Hombre"
+          }
+        }
+      },
+      "block_order": [
+        "column_NKCtJ9",
+        "column_9ENtji"
+      ],
+      "custom_css": [
+        ".multicolumn > div {width: 100%; max-width: 100%; padding: 0;}",
+        ".multicolumn ul {gap: 0; width: 100%; display: grid; grid-template-columns: 50% 50%; padding: 0;}",
+        ".multicolumn li {max-width: 100%; width: 100%;}",
+        ".multicolumn-card__info {position: absolute; bottom: 3rem; width: 100%; background-color: #ffffffad;}",
+        "h3 {font-size: 4em;}",
+        "li:nth-child(2) h3 {color: var(--custom-blau);}",
+        "li .link {background-color: var(--custom-rosa); color: #fff; font-size: 1.2em; padding: 1.5rem 6rem;}",
+        "li:nth-child(2) .link {background: var(--custom-gradient);}"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "hxxl",
+        "image_width": "full",
+        "image_ratio": "portrait",
+        "columns_desktop": 2,
+        "column_alignment": "center",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "scheme-61c7d82a-9edb-45dc-912f-d8acc8e2bf2f",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "multicolumn_6BjLmj": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_mqAtm7": {
+          "type": "column",
+          "settings": {
+            "title": "MÁS DE<strong> 175 CENTROS</strong>",
+            "text": "<p>en toda España</p>",
+            "link_label": "ENCUENTRA TU CENTRO",
+            "link": "shopify://pages/encuentra-tu-centro"
+          }
+        },
+        "column_QHXUDD": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/madrid.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "DEPILACIÓN LÁSER MADRID",
+            "link": "shopify://metaobjects/provincia/madrid"
+          }
+        },
+        "column_fLdwMF": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/barcelona.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "DEPILACIÓN LÁSER BARCELONA",
+            "link": "shopify://metaobjects/provincia/barcelona"
+          }
+        },
+        "column_db76JJ": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/sevilla.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "DEPILACIÓN LÁSER SEVILLA",
+            "link": "shopify://metaobjects/provincia/sevilla"
+          }
+        }
+      },
+      "block_order": [
+        "column_mqAtm7",
+        "column_QHXUDD",
+        "column_fLdwMF",
+        "column_db76JJ"
+      ],
+      "custom_css": [
+        ".multicolumn-list li:nth-child(1) h3 {font-size: 3.8em; text-align: start; line-height: 1;}",
+        ".multicolumn-list li:nth-child(1) .rte {color: var(--custom-blau); font-size: 1.8em; text-align: start;}",
+        ".multicolumn-list li:nth-child(1) .link {color: #fff; border: none; background: var(--custom-gradient); padding: 1.75rem 2rem; margin: 2rem 0;}",
+        ".multicolumn-list li:nth-child(1) .multicolumn-card__info {text-align: start;}",
+        "img {border-radius: 3rem;}",
+        ".link {border-color: var(--custom-rosa);}"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "hxl",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 4,
+        "column_alignment": "center",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "scheme-b2a474ba-194c-4086-912f-a14dadfe75dd",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 100,
+        "padding_bottom": 100
+      }
+    },
+    "custom_liquid_3DWDrm": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<div style=\"padding: 40px 0; background-color: #f9f9f9;\">\n  <h2 style=\"font-size: 28px; font-weight: bold; margin-bottom: 20px; text-align: center;\">NOSOTROS ✨</h2>\n  <div style=\"display: flex; gap: 20px; overflow-x: auto; scroll-snap-type: x mandatory; padding: 10px 20px;\">\n    {% assign videos = \"https://cdn.shopify.com/videos/c/o/v/8af880a2865744b0b61ebf77295716f9.mov,https://cdn.shopify.com/videos/c/o/v/1b5f0938acbe40178a36805729a8d1c4.mov,https://cdn.shopify.com/videos/c/o/v/8f1d0471966d4cf98c332da11632cd38.mp4,https://cdn.shopify.com/videos/c/o/v/3b0d5f4160564b48b397f59e4592596c.mp4,https://cdn.shopify.com/videos/c/o/v/c0cd2f1fac8845feb59a0cf86059744d.mp4,https://cdn.shopify.com/videos/c/o/v/6ed82527de6a48b683482088462775fd.mp4\" | split: \",\" %}\n    {% for video in videos %}\n      <div style=\"flex: 0 0 auto; width: 250px; padding: 0; scroll-snap-align: center;\">\n        <video autoplay muted loop playsinline style=\"width: 100%; height: auto; border-radius: 10px; display: block;\">\n          <source src=\"{{ video | strip }}\" type=\"video/mp4\">\n          <source src=\"{{ video | strip }}\" type=\"video/quicktime\">\n        </video>\n      </div>\n    {% endfor %}\n  </div>\n</div>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "multicolumn_MHaFXR": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_gJ7mWB": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/depilacion-mujer.png",
+            "title": "DEPILACIÓN LÁSER<strong> MUJER</strong>",
+            "text": "<p>La depilación láser diodo más efectiva al mejor precio. Olvídate para siempre de ceras y cuchillas y ahorra tiempo y dinero.</p>",
+            "link_label": "SABER MÁS",
+            "link": "shopify://pages/depilacion-laser-mujer"
+          }
+        },
+        "column_MTHmn3": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/depilacion-hombre.png",
+            "title": "DEPILACIÓN LÁSER<strong> HOMBRE</strong>",
+            "text": "<p>La depilación láser diodo para hombres con resultados permanentes demostrados. Prácticamente indolora y efectiva sobre todo tipo de pieles.</p>",
+            "link_label": "SABER MÁS",
+            "link": "shopify://pages/depilacion-laser-hombre"
+          }
+        }
+      },
+      "block_order": [
+        "column_gJ7mWB",
+        "column_MTHmn3"
+      ],
+      "custom_css": [
+        ".title {text-align: center; width: 100%;}",
+        ".link {border-color: var(--custom-rosa);}",
+        "li:nth-child(2) * {color: var(--custom-blau); border-color: var(--custom-blau);}",
+        ".multicolumn > div {max-width: 1200px;}",
+        ".multicolumn-card__info {background-color: #fff; border-radius: 4rem; padding: 3rem 8rem;}",
+        ".multicolumn-card__info h3 {font-size: 2em;}",
+        ".multicolumn-card__info h3 strong {display: block; line-height: 0.5;}",
+        ".rte {width: 80%; margin: 3rem auto;}",
+        "@media (max-width: 768px) {.multicolumn-card__info {padding: 3rem 1rem; }}"
+      ],
+      "settings": {
+        "title": "DEPILACIÓN <strong>LÁSER</strong>",
+        "heading_size": "hxl",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 2,
+        "column_alignment": "center",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "scheme-b2a474ba-194c-4086-912f-a14dadfe75dd",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 100,
+        "padding_bottom": 100
+      }
+    },
+    "featured_blog_i7PG9F": {
+      "type": "featured-blog",
+      "custom_css": [
+        "h2 {width: 100%; text-align: center;}",
+        "h2 strong {display: block;}",
+        "h3 {color: var(--custom-rosa);}",
+        ".media {border-radius: 3rem 3rem 0 0; overflow: hidden;}",
+        ".card {box-shadow: 0px 0px 5px 0px #ddd; border-radius: 3rem;}",
+        ".button {margin: 0 2rem 2rem; text-decoration: none; background-color: transparent; color: var(--custom-rosa); border: 2px solid var(--custom-rosa); padding: 1rem 5rem; width: fit-content;}",
+        ".button:hover::after {box-shadow: none;}"
+      ],
+      "settings": {
+        "heading": "¡EL RINCÓN DE<strong> SINVELLO!</strong>",
+        "heading_size": "hxl",
+        "blog": "news",
+        "post_limit": 3,
+        "columns_desktop": 3,
+        "color_scheme": "scheme-61c7d82a-9edb-45dc-912f-d8acc8e2bf2f",
+        "show_image": true,
+        "show_date": false,
+        "show_author": false,
+        "show_view_all": true,
+        "padding_top": 100,
+        "padding_bottom": 100
+      }
+    },
+    "rich_text_9D3Pem": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_tT9FJK": {
+          "type": "heading",
+          "settings": {
+            "heading": "ENCUENTRA TU <strong>SINVELLO! </strong></BR>MÁS CERCANO",
+            "heading_size": "h0"
+          }
+        }
+      },
+      "block_order": [
+        "heading_tT9FJK"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "172847137908252a37": {
+      "type": "apps",
+      "blocks": {
+        "progus_store_locator_app_block_keteac": {
+          "type": "shopify://apps/progus-store-locator/blocks/app-block/d7896016-8cc9-45e0-860e-ba85ba3d5be4",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "progus_store_locator_app_block_keteac"
+      ],
+      "custom_css": [],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "custom_liquid_JCJgbE": {
+      "type": "custom-liquid",
+      "disabled": true,
+      "settings": {
+        "custom_liquid": "",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
+    }
+  },
+  "order": [
+    "1746175889ca7f2e92",
+    "apps_FkVCww",
+    "featured_collection_LmriHU",
+    "featured_collection_YEQbg9",
+    "featured_collection_eCdyjT",
+    "multicolumn_VqJGgp",
+    "multicolumn_6BjLmj",
+    "custom_liquid_3DWDrm",
+    "multicolumn_MHaFXR",
+    "featured_blog_i7PG9F",
+    "rich_text_9D3Pem",
+    "172847137908252a37",
+    "custom_liquid_JCJgbE"
+  ]
+}

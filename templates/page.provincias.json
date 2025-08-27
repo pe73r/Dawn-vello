@@ -1,1 +1,161 @@
-{"sections":{"main":{"type":"main-page","disabled":true,"settings":{"padding_top":28,"padding_bottom":28}},"rich_text_cCUr3a":{"type":"rich-text","blocks":{"heading_Jx9gUa":{"type":"heading","settings":{"heading":"ENCUENTRA TU  <strong>SINVELLO! <\/strong> MÁS CERCANO","heading_size":"h0"}}},"block_order":["heading_Jx9gUa"],"custom_css":[".rich-text__wrapper {padding: 0;}"],"settings":{"desktop_content_position":"center","content_alignment":"center","color_scheme":"scheme-311a7f12-de7f-4bb2-98a1-31411433d0fb","full_width":true,"padding_top":24,"padding_bottom":28}},"rich_text_ppGLYi":{"type":"rich-text","settings":{"desktop_content_position":"center","content_alignment":"center","color_scheme":"","full_width":true,"padding_top":40,"padding_bottom":52}},"172968108476e176d5":{"type":"apps","blocks":{"progus_store_locator_app_block_gggyEP":{"type":"shopify:\/\/apps\/progus-store-locator\/blocks\/app-block\/d7896016-8cc9-45e0-860e-ba85ba3d5be4","settings":{}}},"block_order":["progus_store_locator_app_block_gggyEP"],"custom_css":[],"settings":{"include_margins":true}},"rich_text_MpUnmw":{"type":"rich-text","settings":{"desktop_content_position":"center","content_alignment":"center","color_scheme":"","full_width":true,"padding_top":40,"padding_bottom":52}},"00_custom_prvince_grid_xwTiRe":{"type":"00-custom-prvince-grid","custom_css":["h2 {font-weight: bold;}"],"settings":{"title":"SELECIONA TU PROVINCIA","color_scheme":"scheme-b2a474ba-194c-4086-912f-a14dadfe75dd"}},"image_with_text_4GFRFP":{"type":"image-with-text","blocks":{"heading_QPnMNt":{"type":"heading","settings":{"heading":"ABRE <strong>TU PROPIA FRANQUICIA<\/strong>","heading_size":"hxl"}},"text_NgwFyh":{"type":"text","settings":{"text":"<p>Únete a la franquicia con más éxito en España. Con una mínima<br\/>inversión, consigue desde el primer momento, y con nuestra ayuda,la mayor rentabilidad en tu negocio. ¡Estaremos encantados de informarte!<\/p>","text_style":"body"}},"button_nnY9Mb":{"type":"button","settings":{"button_label":"SABER MÁS","button_link":"shopify:\/\/pages\/franquicia","button_style_secondary":true}}},"block_order":["heading_QPnMNt","text_NgwFyh","button_nnY9Mb"],"custom_css":["h2 {width: 80%;}",".subtitle {width: 100%;}","@media (max-width: 768px) {h2 {width: 100%; } .image-with-text__content {padding: 4rem 1rem 5rem; }}",".button--secondary {font-size: 1.3em; padding: 1.5rem 6rem; border: 2px solid;}",".image-with-text__media-item {width: 40%;}",".rte {color: #fff;}"],"settings":{"image":"shopify:\/\/shop_images\/franquicia_3.png","height":"medium","desktop_image_width":"small","layout":"image_first","desktop_content_position":"top","desktop_content_alignment":"left","content_layout":"no-overlap","section_color_scheme":"","color_scheme":"scheme-311a7f12-de7f-4bb2-98a1-31411433d0fb","image_behavior":"none","mobile_content_alignment":"center","padding_top":100,"padding_bottom":100}}},"order":["main","rich_text_cCUr3a","rich_text_ppGLYi","172968108476e176d5","rich_text_MpUnmw","00_custom_prvince_grid_xwTiRe","image_with_text_4GFRFP"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+
+
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "rich_text_cCUr3a": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_Jx9gUa": {
+          "type": "heading",
+          "settings": {
+            "heading": "ENCUENTRA TU  <strong>SINVELLO! </strong> MÁS CERCANO",
+            "heading_size": "h0"
+          }
+        }
+      },
+      "block_order": [
+        "heading_Jx9gUa"
+      ],
+      "custom_css": [
+        ".rich-text__wrapper {padding: 0;}"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-311a7f12-de7f-4bb2-98a1-31411433d0fb",
+        "full_width": true,
+        "padding_top": 24,
+        "padding_bottom": 28
+      }
+    },
+    "rich_text_ppGLYi": {
+      "type": "rich-text",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "172968108476e176d5": {
+      "type": "apps",
+      "blocks": {
+        "progus_store_locator_app_block_gggyEP": {
+          "type": "shopify://apps/progus-store-locator/blocks/app-block/d7896016-8cc9-45e0-860e-ba85ba3d5be4",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "progus_store_locator_app_block_gggyEP"
+      ],
+      "custom_css": [],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "rich_text_MpUnmw": {
+      "type": "rich-text",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "00_custom_prvince_grid_xwTiRe": {
+      "type": "00-custom-prvince-grid",
+      "custom_css": [
+        "h2 {font-weight: bold;}"
+      ],
+      "settings": {
+        "title": "SELECIONA TU PROVINCIA",
+        "color_scheme": "scheme-b2a474ba-194c-4086-912f-a14dadfe75dd"
+      }
+    },
+    "image_with_text_4GFRFP": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_QPnMNt": {
+          "type": "heading",
+          "settings": {
+            "heading": "ABRE <strong>TU PROPIA FRANQUICIA</strong>",
+            "heading_size": "hxl"
+          }
+        },
+        "text_NgwFyh": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Únete a la franquicia con más éxito en España. Con una mínima<br/>inversión, consigue desde el primer momento, y con nuestra ayuda,la mayor rentabilidad en tu negocio. ¡Estaremos encantados de informarte!</p>",
+            "text_style": "body"
+          }
+        },
+        "button_nnY9Mb": {
+          "type": "button",
+          "settings": {
+            "button_label": "SABER MÁS",
+            "button_link": "shopify://pages/franquicia",
+            "button_style_secondary": true
+          }
+        }
+      },
+      "block_order": [
+        "heading_QPnMNt",
+        "text_NgwFyh",
+        "button_nnY9Mb"
+      ],
+      "custom_css": [
+        "h2 {width: 80%;}",
+        ".subtitle {width: 100%;}",
+        "@media (max-width: 768px) {h2 {width: 100%; } .image-with-text__content {padding: 4rem 1rem 5rem; }}",
+        ".button--secondary {font-size: 1.3em; padding: 1.5rem 6rem; border: 2px solid;}",
+        ".image-with-text__media-item {width: 40%;}",
+        ".rte {color: #fff;}"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/franquicia_3.png",
+        "height": "medium",
+        "desktop_image_width": "small",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "",
+        "color_scheme": "scheme-311a7f12-de7f-4bb2-98a1-31411433d0fb",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "padding_top": 100,
+        "padding_bottom": 100
+      }
+    }
+  },
+  "order": [
+    "main",
+    "rich_text_cCUr3a",
+    "rich_text_ppGLYi",
+    "172968108476e176d5",
+    "rich_text_MpUnmw",
+    "00_custom_prvince_grid_xwTiRe",
+    "image_with_text_4GFRFP"
+  ]
+}
