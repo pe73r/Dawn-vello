@@ -1,0 +1,686 @@
+{% schema %}
+{
+  "name": "Header Personalizado",
+  "limit": 1,
+  "settings": [
+    {
+      "type": "select",
+      "id": "text_position_desktop",
+      "label": "Posición del Texto (Ordenador)",
+      "default": "left",
+      "options": [
+        {
+          "value": "left",
+          "label": "Izquierda"
+        },
+        {
+          "value": "right",
+          "label": "Derecha"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "text_position_mobile",
+      "label": "Posición del Texto (Móvil)",
+      "default": "top",
+      "options": [
+        {
+          "value": "top",
+          "label": "Arriba"
+        },
+        {
+          "value": "bottom",
+          "label": "Abajo"
+        }
+      ]
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Esquema de color",
+      "default": "scheme-1"
+    },
+    {
+      "type": "image_picker",
+      "id": "background_image",
+      "label": "Imagen de Fondo"
+    }
+  ],
+  "max_blocks": 2,
+  "blocks": [
+    {
+      "type": "texto",
+      "name": "Texto",
+      "settings": [
+        {
+          "type": "inline_richtext",
+          "id": "titulo1",
+          "label": "Título 1",
+          "default": "Este es el título superior"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "titulo2",
+          "label": "Título 2",
+          "default": "Este es el título inferior"
+        },
+        {
+          "type": "richtext",
+          "id": "descripcion",
+          "label": "Descripción",
+          "default": "<p>Este es el texto descriptivo.</p>"
+        },
+        {
+          "type": "text",
+          "id": "info_boton_texto",
+          "label": "Texto Informativo del Botón"
+        },
+        {
+          "type": "text",
+          "id": "boton_texto",
+          "label": "Texto del Botón",
+          "default": "Más información"
+        },
+        {
+          "type": "url",
+          "id": "url_boton",
+          "label": "Enlace del Botón",          
+        },
+        {
+          "type": "select",
+          "id": "btn_style",
+          "label": "Estilo boton",
+          "default": "primary",
+          "options": [
+            {
+              "value": "anchor",
+              "label": "Enlace"
+            },
+            {
+              "value": "primary",
+              "label": "Primario"
+            },
+            {
+              "value": "secondary",
+              "label": "Secondario"
+            }
+          ]
+        },
+        {
+          "type": "checkbox",
+          "id": "transparent",
+          "label": "Caja transparente",          
+        },
+        {
+          "type": "checkbox",
+          "id": "full_width",
+          "label": "Caja al 100%",          
+        },
+        {
+          "type": "select",
+          "id": "out-center",
+          "label": "Centrado de caja",
+          "default": "center",
+          "options": [
+            {
+              "value": "left",
+              "label": "Izquierda"
+            },
+            {
+              "value": "center",
+              "label": "Centro"
+            },
+            {
+              "value": "right",
+              "label": "Derecha"
+            }
+          ]
+        },
+        {
+          "type": "select",
+          "id": "in-center",
+          "label": "Centrado de texto",
+          "default": "left",
+          "options": [
+            {
+              "value": "left",
+              "label": "Izquierda"
+            },
+            {
+              "value": "center",
+              "label": "Centro"
+            },
+            {
+              "value": "right",
+              "label": "Derecha"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "media",
+      "name": "Media",
+      "settings": [
+        {
+          "type": "select",
+          "id": "media_tipo",
+          "label": "Tipo de Media",
+          "default": "imagen",
+          "options": [
+            {
+              "value": "imagen",
+              "label": "Imagen"
+            },
+            {
+              "value": "video",
+              "label": "Video"
+            }
+          ]
+        },
+        {
+          "type": "video",
+          "id": "video_file",
+          "label": "Archivo de Video",
+          "info": "Cargue el archivo de video si ha seleccionado 'Video' como tipo de fondo."
+        },
+        {
+          "type": "image_picker",
+          "id": "image_url",
+          "label": "Imagen de Fondo",
+          "info": "Utilice esta opción si ha seleccionado 'Imagen' como tipo de fondo."
+        },
+        {
+          "type": "select",
+          "id": "img-center",
+          "label": "Centrado de media",
+          "default": "center",
+          "options": [
+            {
+              "value": "left",
+              "label": "Izquierda"
+            },
+            {
+              "value": "center",
+              "label": "Centro"
+            },
+            {
+              "value": "right",
+              "label": "Derecha"
+            }
+          ]
+        },
+        {
+          "type": "select",
+          "id": "media_height",
+          "label": "Altura de media",
+          "default": "400",
+          "options": [
+            {
+              "value": "200",
+              "label": "Pequeña"
+            },
+            {
+              "value": "400",
+              "label": "Mediana"
+            },
+            {
+              "value": "600",
+              "label": "Grande"
+            }
+          ]
+        },
+        {
+          "type": "select",
+          "id": "media_width",
+          "label": "Anchura de media",
+          "default": "60",
+          "options": [
+            {
+              "value": "30",
+              "label": "Pequeña"
+            },
+            {
+              "value": "60",
+              "label": "Mediana"
+            },
+            {
+              "value": "100",
+              "label": "Grande"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "form",
+      "name": "Formulario",
+      "settings": [
+        {
+          "type": "inline_richtext",
+          "id": "form_title",
+          "label": "Título del formulario",
+          "default": "Reserva ahora"
+        },
+        {
+          "type": "richtext",
+          "id": "form_description",
+          "label": "Descripción del formulario",
+          "default": "<p>Complete el formulario a continuación para realizar su reserva.</p>"
+        },
+        {
+          "type": "text",
+          "id": "button_text",
+          "label": "Texto del botón",
+          "default": "Enviar"
+        },
+        {
+          "type": "text",
+          "id": "name_placeholder",
+          "label": "Texto del campo 'Nombre'",
+          "default": "Su nombre"
+        },
+        {
+          "type": "text",
+          "id": "phone_placeholder",
+          "label": "Texto del campo 'Teléfono'",
+          "default": "Su teléfono"
+        },
+        {
+          "type": "text",
+          "id": "email_placeholder",
+          "label": "Texto del campo 'Email'",
+          "default": "Su email"
+        },
+        {
+          "type": "text",
+          "id": "province_placeholder",
+          "label": "Texto del campo 'Seleccionar Provincia'",
+          "default": "Seleccione su provincia"
+        },
+        {
+          "type": "url",
+          "id": "consent_url",
+          "label": "URL de la Política de Privacidad"          
+        },
+        {
+          "type": "text",
+          "id": "consent_text",
+          "label": "Texto del consentimiento",
+          "default": "He leído y acepto la"
+        },
+        {
+          "type": "text",
+          "id": "consent_anchor_text",
+          "label": "Texto del enlace del consentimiento",
+          "default": "Política de Privacidad"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Header Personalizado",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}
+
+<style>
+  .custom-section {
+    background-image: url(/cdn/shop/{{ section.settings.background_image | image_url: 'original' }});  
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .custom-section .container{
+    max-width: var(--page-width);
+    padding: 5rem 2rem;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 48% 48%;
+    align-items: center;
+    grid-gap: 4%;
+    {% if section.settings.text_position_desktop == "left" %}
+    grid-template-areas: "first second";
+    {% else %}
+    grid-template-areas: "second first";
+    {% endif %}
+  }
+  .t-text{
+    grid-area: first;
+    border-radius: 2rem;
+    padding: 2rem 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+  }
+  .t-text  h1 {
+    text-align: start;
+    font-size: 4em;
+  }
+  .t-text .title-1 {
+    color: black;
+  }
+  .t-text .title-2 {
+    font-weight: bold;
+  }
+  .t-text .btn{
+    text-decoration: none;
+    background-color: rgba(var(--color-button),var(--alpha-button-background));
+    color: rgb(var(--color-button-text));
+    border-radius: 5rem;
+    padding: 1.5rem 8rem;
+    display: block;
+    width: fit-content;
+    font-size: 1.2em;
+    background: var(--custom-gradient)
+  }
+  .t-text .btn-secondary{
+    padding: 0.5rem 2rem;
+    text-decoration: none;
+    border-radius: 5px;
+    background-color: transparent;
+    border: 1px solid rgba(var(--color-foreground), .75);;
+  }
+  .t-text .btn-link{
+    padding: 0.5rem 0;    
+    background-color: transparent;
+  }
+  .t-text .btn-info {
+    font-weight: bold;
+    color: black;
+    font-size: 1.1em;
+    margin: 0;
+    margin-top: 3rem;
+  }
+  .t-media{
+    grid-area: second;
+  }
+  .t-media video{
+    width: 100%;
+  }
+  .t-form{
+    grid-area: second;
+    display: flex;
+    justify-content: end;
+  }
+  .form-box{
+    border-radius: 3rem;
+    padding: 2rem 4rem 5rem;
+    text-align: center;
+    box-shadow: 0px 0px 5px 0px #c3c3c3;
+    width: 70%;
+  }
+  .t-form .form-box h2{
+    font-size: 2em;
+    color: var(--custom-rosa);
+  }
+  .t-form form{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+  }
+  .t-form form .field:after{
+    box-shadow: none!important;
+  }
+  .t-form form .field .field__label,
+  .t-form form .field .field__input,
+  .t-form form .form-field label{
+    color: black;
+  }
+  .t-form form .field .field__input{
+    border: 1px solid black;
+    box-shadow: none!important;
+  }
+  .t-form .contact__button .button{
+    background-color: var(--custom-rosa);
+    color: #fff;
+    border: none;
+    transform: none!important;
+    box-shadow: none!important;
+  }
+  .t-form .contact__button .button:after{
+    box-shadow: none!important;
+  }
+  @media (max-width: 768px){
+    .custom-section .container{
+      grid-template-columns: auto;
+      justify-content: center;
+      {% if section.settings.text_position_mobile == "top" %}
+      grid-template-areas: 
+        "first" 
+        "second";
+      {% else %}
+      grid-template-areas:         
+        "second"
+        "first";
+      {% endif %}
+    }
+    .t-text{
+      padding: 1rem;
+    }
+    .t-media img{
+      height: 100%!important;
+    }
+  }
+</style>
+
+<section class="custom-section color-{{ section.settings.color_scheme }}">
+  <div class="container">
+    {% for block in section.blocks %}
+      {% if block.type == 'texto' %}
+        <div class="t-text {% if block.settings.transparent == false %}color-{{ section.settings.color_scheme }} gradient{% endif %}" style="text-align: {{ block.settings.in-center }};{% if block.settings.out-center == "center" %}margin: auto;{% endif %}{% if block.settings.out-center == "right" %}margin-left: auto;{% endif %}{% if block.settings.full_width %}width: 100%;{% else %}width: fit-content;{% endif %}">
+          <h1>
+            <span class="title-1">
+              {{ block.settings.titulo1 }}
+            </span>
+            <br />
+            <span class="title-2">
+              {{ block.settings.titulo2 }}
+            </span>
+          </h1>          
+          <div class="desc">{{ block.settings.descripcion }}</div>
+
+          {% if block.settings.boton_texto != "" %}
+            <div class="btn-group">
+              {% if block.settings.info_boton_texto != "" %}
+              <p class="btn-info">{{ block.settings.info_boton_texto }}</p>
+              {% endif %}
+              {% if block.settings.btn_style == "primary" %}
+              <a href="{{ block.settings.url_boton }}" class="btn color-{{ section.settings.color_scheme }}">{{ block.settings.boton_texto }}</a>
+              {% elsif block.settings.btn_style == "secondary"  %}
+              <a href="{{ block.settings.url_boton }}" class="btn-secondary color-{{ section.settings.color_scheme }}">{{ block.settings.boton_texto }}</a>
+              {% else %}
+              <a href="{{ block.settings.url_boton }}" class="btn-link color-{{ section.settings.color_scheme }}">{{ block.settings.boton_texto }}</a>
+              {% endif %}
+            </div>
+          {% endif %}
+        </div>
+      {% endif %}
+
+      {% if block.type == 'media' %}
+        <div class="t-media" style="display: flex; justify-content: {{ block.settings.img-center }};">
+          {% if block.settings.media_tipo == 'imagen' %}
+            {% if block.settings.image_url %}
+              <img src="/cdn/shop/{{ block.settings.image_url | image_url: 'master' }}" alt="Imagen" width="300" height="{{ block.settings.media_height }}" style="width: {{ block.settings.media_width }}%; object-fit:cover;">
+            {% endif %}
+          {% elsif block.settings.media_tipo == 'video' %}
+            {% if block.settings.video_file %}
+              <div style="width: {{ block.settings.media_width }}%; height: {{ block.settings.media_height }}px; display: flex; align-items: center;">
+                {{ block.settings.video_file | video_tag: autoplay: true, muted: true, loop: true }}
+              </div>
+            {% endif %}
+          {% endif %}
+        </div>
+      {% endif %}
+      
+      {% if block.type == 'form' %}
+        <div class="t-form">
+          <div class="color-{{ section.settings.color_scheme }} gradient form-box">
+            <h2>{{ block.settings.form_title }}</h2>
+            <p>{{ block.settings.form_description }}</p>
+            
+            {%- form 'contact', id: 'ContactForm', class: contact_form_class -%}
+              {%- if form.posted_successfully? -%}
+                <h2 class="form-status form-status-list form__message" tabindex="-1" autofocus>
+                  {% render 'icon-success' %}
+                  {{ 'templates.contact.form.post_success' | t }}
+                </h2>
+              {%- elsif form.errors -%}
+                <div class="form__message">
+                  <h2 class="form-status caption-large text-body" role="alert" tabindex="-1" autofocus>
+                    {% render 'icon-error' %}
+                    {{ 'templates.contact.form.error_heading' | t }}
+                  </h2>
+                </div>
+                <ul class="form-status-list caption-large" role="list">
+                  <li>
+                    <a href="#ContactForm-email" class="link">
+                      {{ form.errors.translated_fields.email | capitalize }}
+                      {{ form.errors.messages.email }}
+                    </a>
+                  </li>
+                </ul>
+              {%- endif -%}
+              <div class="field">
+                <input
+                  class="field__input"
+                  autocomplete="name"
+                  type="text"
+                  id="ContactForm-name"
+                  name="contact[{{ block.settings.name_placeholder }}]"
+                  value="{% if form.name %}{{ form.name }}{% elsif customer %}{{ customer.name }}{% endif %}"
+                  placeholder="{{ block.settings.name_placeholder }}"
+                >
+                <label class="field__label" for="ContactForm-name">{{ block.settings.name_placeholder }}</label>
+              </div>
+              <div class="field">              
+                <input
+                  type="tel"
+                  id="ContactForm-phone"
+                  class="field__input"
+                  autocomplete="tel"
+                  name="contact[{{ block.settings.phone_placeholder }}]"
+                  pattern="[0-9\-]*"
+                  value="{% if form.phone %}{{ form.phone }}{% elsif customer %}{{ customer.phone }}{% endif %}"
+                  placeholder="{{ block.settings.phone_placeholder }}"
+                >
+                <label class="field__label" for="ContactForm-phone">{{ block.settings.phone_placeholder }}</label>
+              </div>
+              <div class="field field--with-error">
+                <input
+                  autocomplete="email"
+                  type="email"
+                  id="ContactForm-email"
+                  class="field__input"
+                  name="contact[email]"
+                  spellcheck="false"
+                  autocapitalize="off"
+                  value="{% if form.email %}{{ form.email }}{% elsif customer %}{{ customer.email }}{% endif %}"
+                  aria-required="true"
+                  {% if form.errors contains 'email' %}
+                    aria-invalid="true"
+                    aria-describedby="ContactForm-email-error"
+                  {% endif %}
+                  placeholder="{{ block.settings.email_placeholder }}"
+                >
+                <label class="field__label" for="ContactForm-email">
+                  {{ block.settings.email_placeholder }}</label>
+                {%- if form.errors contains 'email' -%}
+                  <small class="contact__field-error" id="ContactForm-email-error">
+                    <span class="visually-hidden">{{ 'accessibility.error' | t }}</span>
+                    <span class="form__message">
+                      {%- render 'icon-error' -%}
+                      {{- form.errors.translated_fields.email | capitalize }}
+                      {{ form.errors.messages.email -}}
+                    </span>
+                  </small>
+                {%- endif -%}
+              </div>
+              <div class="field">
+                <select
+                  style="padding: 0.8rem 1.5rem .8rem 2rem;"
+                  class="field__input"
+                  id="ContactForm-province"
+                  name="contact[{{ block.settings.province_placeholder }}]"
+                  value="{% if form.province %}{{ form.province }}{% elsif customer %}{{ customer.province }}{% endif %}"                
+                >
+                   <option value="" disabled selected>{{ block.settings.province_placeholder }}</option>
+                  <option value="Álava">Álava</option>
+                  <option value="Albacete">Albacete</option>
+                  <option value="Alicante">Alicante</option>
+                  <option value="Almería">Almería</option>
+                  <option value="Asturias">Asturias</option>
+                  <option value="Ávila">Ávila</option>
+                  <option value="Badajoz">Badajoz</option>
+                  <option value="Barcelona">Barcelona</option>
+                  <option value="Burgos">Burgos</option>
+                  <option value="Cáceres">Cáceres</option>
+                  <option value="Cádiz">Cádiz</option>
+                  <option value="Cantabria">Cantabria</option>
+                  <option value="Castellón">Castellón</option>
+                  <option value="Ciudad Real">Ciudad Real</option>
+                  <option value="Córdoba">Córdoba</option>
+                  <option value="Cuenca">Cuenca</option>
+                  <option value="Girona">Girona</option>
+                  <option value="Granada">Granada</option>
+                  <option value="Guadalajara">Guadalajara</option>
+                  <option value="Guipúzcoa">Guipúzcoa</option>
+                  <option value="Huelva">Huelva</option>
+                  <option value="Huesca">Huesca</option>
+                  <option value="Islas Baleares">Islas Baleares</option>
+                  <option value="Jaén">Jaén</option>
+                  <option value="La Coruña">La Coruña</option>
+                  <option value="La Rioja">La Rioja</option>
+                  <option value="Las Palmas">Las Palmas</option>
+                  <option value="León">León</option>
+                  <option value="Lérida">Lérida</option>
+                  <option value="Lugo">Lugo</option>
+                  <option value="Madrid">Madrid</option>
+                  <option value="Málaga">Málaga</option>
+                  <option value="Murcia">Murcia</option>
+                  <option value="Navarra">Navarra</option>
+                  <option value="Orense">Orense</option>
+                  <option value="Palencia">Palencia</option>
+                  <option value="Pontevedra">Pontevedra</option>
+                  <option value="Salamanca">Salamanca</option>
+                  <option value="Santa Cruz de Tenerife">Santa Cruz de Tenerife</option>
+                  <option value="Segovia">Segovia</option>
+                  <option value="Sevilla">Sevilla</option>
+                  <option value="Soria">Soria</option>
+                  <option value="Tarragona">Tarragona</option>
+                  <option value="Teruel">Teruel</option>
+                  <option value="Toledo">Toledo</option>
+                  <option value="Valencia">Valencia</option>
+                  <option value="Valladolid">Valladolid</option>
+                  <option value="Vizcaya">Vizcaya</option>
+                  <option value="Zamora">Zamora</option>
+                  <option value="Zaragoza">Zaragoza</option>
+                </select>
+                <label class="field__label" style="display: none;" for="ContactForm-province">{{ block.settings.province_placeholder }}</label>
+              </div>
+              
+              <div class="form-field">
+                <label>
+                  <input type="checkbox" name="contact[consent]" required>
+                  {{ block.settings.consent_text }}
+                  <a class="color-{{ section.settings.color_scheme }}" href="{{ block.settings.consent_url }}" target="_blank" style="background-color: transparent;">{{ block.settings.consent_anchor_text }}</a>
+                </label>
+              </div>
+              <div class="contact__button">
+                <button type="submit" class="button color-{{ section.settings.color_scheme }}">
+                  {{ block.settings.button_text }}
+                </button>
+              </div>            
+            {% endform %}
+          </div>
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+</section>

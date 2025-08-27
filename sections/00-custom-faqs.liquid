@@ -1,0 +1,156 @@
+{% schema %}
+{
+  "name": "FAQ Accordion",
+  "settings": [
+    {
+      "type": "inline_richtext",
+      "id": "section_title",
+      "label": "Título de la sección",
+      "default": "Preguntas frecuentes"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Color de fondo",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Color del texto",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "accent_color",
+      "label": "Color de acento",
+      "default": "#ff69b4"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "faq_item",
+      "name": "Pregunta FAQ",
+      "settings": [
+        {
+          "type": "text",
+          "id": "question",
+          "label": "Pregunta",
+          "default": "¿Cómo se inicia el proyecto?"
+        },
+        {
+          "type": "richtext",
+          "id": "answer",
+          "label": "Respuesta",
+          "default": "<p>Aquí va la respuesta detallada...</p>"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "FAQ Accordion",
+      "blocks": [
+        {
+          "type": "faq_item"
+        },
+        {
+          "type": "faq_item"
+        },
+        {
+          "type": "faq_item"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
+
+<style>
+  #shopify-section-{{ section.id }} {
+    background-color: {{ section.settings.background_color }};
+    color: {{ section.settings.text_color }};    
+  }
+  .faq-accordion {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem 1rem 5rem;
+  }
+  .faq-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+      
+  }
+  .faq-item {
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 1rem;
+  }
+  .faq-question {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 1rem 0;
+  }
+  .faq-question-text {
+    flex-grow: 1;
+    margin-left: 1rem;
+    font-weight: bold;
+    font-size: 1.2em;
+    transition: color 0.5s ease;
+  }
+  .faq-question-text.active{
+    color: var(--custom-rosa);
+  }
+  .faq-icon {
+    width: 32px;
+    height: 32px;
+    transition: transform 0.5s ease, background-color 0.5s ease;
+    flex-shrink: 0;
+    background-color: var(--custom-rosa);
+    border-radius: 50%;
+    padding: 5px;
+  }
+  .faq-icon.active {
+    transform: rotate(180deg);
+    background-color: #000;
+  }
+  .faq-answer {
+    display: none;
+    padding: 1rem 1rem 2rem;
+  }
+  .faq-answer.active {
+    display: block;
+  }
+  .faq-answer p{
+    margin: 0;
+  }
+</style>
+
+<div class="faq-accordion">
+  <h2 class="faq-title">{{ section.settings.section_title }}</h2>
+  {% for block in section.blocks %}
+    <div class="faq-item" {{ block.shopify_attributes }}>
+      <div class="faq-question" onclick="toggleAnswer(this)">
+        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M6 9L12 15L18 9" stroke="{{ section.settings.accent_color }}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <h3 class="faq-question-text">{{ block.settings.question }}</h3>
+      </div>
+      <div class="faq-answer">
+        {{ block.settings.answer }}
+      </div>
+    </div>
+  {% endfor %}
+</div>
+
+<script>
+  function toggleAnswer(element) {
+    const answer = element.nextElementSibling;
+    const icon = element.querySelector('.faq-icon');
+    const question = element.querySelector('.faq-question-text');
+    answer.classList.toggle('active');
+    icon.classList.toggle('active');
+    question.classList.toggle('active');
+  }
+</script>

@@ -1,0 +1,274 @@
+{% schema %}
+{
+  "name": "Landing Countdown",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "background_image",
+      "label": "Imagen de fondo"
+    },
+    {
+      "type": "range",
+      "id": "background_opacity",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "%",
+      "label": "Opacidad del fondo",
+      "default": 100
+    },
+    {
+      "type": "inline_richtext",
+      "id": "title",
+      "label": "Título",
+      "default": "BlackBox"
+    },
+    {
+      "type": "image_picker",
+      "id": "logo",
+      "label": "Logo"
+    },
+    {
+      "type": "range",
+      "id": "logo_width",
+      "min": 50,
+      "max": 400,
+      "step": 10,
+      "unit": "px",
+      "label": "Ancho del logo",
+      "default": 200
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Descripción",
+      "default": "<p>¡La mayor oferta de Depilación Láser<br>Diodo del Black Friday!</p>"
+    },
+    {
+      "type": "text",
+      "id": "countdown_date",
+      "label": "Fecha final (DD/MM/YYYY hh:mm:ss)",
+      "default": "31/12/2024 23:59:59"
+    },
+    {
+      "type": "richtext",
+      "id": "countdown_text",
+      "label": "Texto contador",
+      "default": "<p>…para la apertura del acceso prioritario</p>"
+    },
+    {
+      "type": "text",
+      "id": "btn_text",
+      "label": "Texto Boton"      
+    },
+    {
+      "type": "url",
+      "id": "btn_url",
+      "label": "Link Boton"      
+    }
+  ],
+  "presets": [
+    {
+      "name": "Header Countdown",
+      "category": "Promotional"
+    }
+  ]
+}
+{% endschema %}
+
+<style>
+.landing-section {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  overflow: hidden;
+}
+
+.landing-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.landing-background img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: {{ section.settings.background_opacity | divided_by: 100.0 }};
+}
+
+.landing-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, #000 0%, rgba(0,0,0,0.9) 100%);
+}
+
+.landing-content {
+  position: relative;
+  padding: 2rem;
+}
+
+.landing-title {
+  font-size: clamp(3.2rem, 20vw, 12rem);
+  line-height: 1;
+  margin: 1rem auto;
+  color: var(--custom-rosa);
+}
+.landing-title strong{
+  color: #fff;
+}
+
+.landing-description {
+  font-size: clamp(1.8rem, 5vi, 2.6rem);
+  margin: 2rem auto;
+  line-height: 1.4;
+  max-width: 630px;
+}
+
+.countdown-container {
+    display: grid;
+    justify-content: center;
+    gap: 4rem;
+    margin-top: 3rem;
+    grid-template-columns: 25% 25% 25% 25%;
+}
+
+.countdown-item {
+  text-align: center;
+}
+
+.countdown-number {
+  font-size: clamp(2.4rem, 10vi, 8rem);
+  font-weight: bold;
+  color: var(--custom-rosa);
+  display: block;
+  line-height: 1;
+}
+
+.countdown-label {
+  font-size: clamp(1.2rem, 4vi, 2.2rem);
+}
+.countdow-text{
+  font-size: clamp(1.8rem, 5vi, 2.6rem);
+  margin: 2rem auto;
+  line-height: 1.4;
+  max-width: 630px;
+}
+.btn-goto{
+  background-color: var(--custom-rosa);
+  color: #fff;
+  text-decoration: none;
+  font-size: 2.2rem;
+  padding: 1.5rem 8rem;
+  border-radius: 3rem;
+  margin: 4rem auto 0;
+  display: block;
+  width: fit-content;
+}
+
+@media (max-width: 768px) {
+  .countdown-container {
+    gap: 1rem;
+  }
+}
+.landing-logo {
+  max-width: {{ section.settings.logo_width }}px;
+  width: 90%;
+  height: auto;
+}
+</style>
+
+<div class="landing-section">
+  <div class="landing-background">
+    {% if section.settings.background_image %}
+      {{ section.settings.background_image | image_url: width: 2000 | image_tag }}
+    {% endif %}
+  </div>
+  <div class="landing-overlay"></div>
+  
+  <div class="landing-content">
+    <h1 class="landing-title">
+      {{ section.settings.title }}
+    </h1>
+    
+    {% if section.settings.logo %}
+      {{ section.settings.logo | image_url: width: section.settings.logo_width | image_tag:        
+        class: 'landing-logo'
+      }}
+    {% endif %}
+    
+    <div class="landing-description">
+      {{ section.settings.description }}
+    </div>
+    
+    <div class="countdown-container">
+      <div class="countdown-item">
+        <span class="countdown-number" id="days">00</span>
+        <span class="countdown-label">Días</span>
+      </div>
+      <div class="countdown-item">
+        <span class="countdown-number" id="hours">00</span>
+        <span class="countdown-label">Horas</span>
+      </div>
+      <div class="countdown-item">
+        <span class="countdown-number" id="minutes">00</span>
+        <span class="countdown-label">Minutos</span>
+      </div>
+      <div class="countdown-item">
+        <span class="countdown-number" id="seconds">00</span>
+        <span class="countdown-label">Segundos</span>
+      </div>
+    </div>
+    <div class="countdow-text">
+      {{ section.settings.countdown_text }}
+    </div>
+    {% if section.settings.btn_text != "" %}
+      <a class="btn-goto" href="{{ section.settings.btn_url }}">{{ section.settings.btn_text }}</a>
+    {% endif %}
+  </div>
+</div>
+
+<script>
+function updateCountdown() {
+  const countdownDate = "{{ section.settings.countdown_date }}";
+  const [datePart, timePart] = countdownDate.split(' ');
+  const [day, month, year] = datePart.split('/');
+  const [hours, minutes, seconds] = timePart.split(':');
+  
+  const targetDate = new Date(year, month - 1, day, hours, minutes, seconds);
+  const now = new Date();
+  const difference = targetDate - now;
+  
+  if (difference <= 0) {
+    document.getElementById('days').textContent = '00';
+    document.getElementById('hours').textContent = '00';
+    document.getElementById('minutes').textContent = '00';
+    document.getElementById('seconds').textContent = '00';
+    return;
+  }
+  
+  const Cdays = Math.floor(difference / (1000 * 60 * 60 * 24));
+  const Chours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  const Cminutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+  const Cseconds = Math.floor((difference % (1000 * 60)) / 1000);
+  
+  document.getElementById('days').textContent = String(Cdays).padStart(2, '0');
+  document.getElementById('hours').textContent = String(Chours).padStart(2, '0');
+  document.getElementById('minutes').textContent = String(Cminutes).padStart(2, '0');
+  document.getElementById('seconds').textContent = String(Cseconds).padStart(2, '0');
+}
+
+// Update the countdown every second
+setInterval(updateCountdown, 1000);
+// Initial update
+updateCountdown();
+</script>

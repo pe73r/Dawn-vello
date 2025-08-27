@@ -1,0 +1,380 @@
+{% schema %}
+{
+  "name": "Formulario de Franquicia",
+  "settings": [
+    {
+      "type": "text",
+      "id": "form_title",
+      "label": "Título del formulario",
+      "default": "¡Abre tu franquicia!"
+    },
+    {
+      "type": "color",
+      "id": "accent_color",
+      "label": "Color de acento",
+      "default": "#ff69b4"
+    },
+    {
+      "type": "text",
+      "id": "nombre_label",
+      "label": "Etiqueta para Nombre",
+      "default": "Nombre"
+    },
+    {
+      "type": "text",
+      "id": "nombre_placeholder",
+      "label": "Placeholder para Nombre",
+      "default": "Tu nombre"
+    },
+    {
+      "type": "text",
+      "id": "apellidos_label",
+      "label": "Etiqueta para Apellidos",
+      "default": "Apellidos"
+    },
+    {
+      "type": "text",
+      "id": "apellidos_placeholder",
+      "label": "Placeholder para Apellidos",
+      "default": "Tus apellidos"
+    },
+    {
+      "type": "text",
+      "id": "telefono_label",
+      "label": "Etiqueta para Teléfono",
+      "default": "Teléfono"
+    },
+    {
+      "type": "text",
+      "id": "telefono_placeholder",
+      "label": "Placeholder para Teléfono",
+      "default": "Tu número de teléfono"
+    },
+    {
+      "type": "text",
+      "id": "email_label",
+      "label": "Etiqueta para Email",
+      "default": "Email"
+    },
+    {
+      "type": "text",
+      "id": "email_placeholder",
+      "label": "Placeholder para Email",
+      "default": "Tu correo electrónico"
+    },
+    {
+      "type": "text",
+      "id": "experiencia_label",
+      "label": "Etiqueta para Experiencia",
+      "default": "¿Tienes experiencia en la depilación láser?"
+    },
+    {
+      "type": "text",
+      "id": "inicio_label",
+      "label": "Etiqueta para Inicio",
+      "default": "¿Cuándo te gustaría empezar?"
+    },
+    {
+      "type": "text",
+      "id": "trabajador_label",
+      "label": "Etiqueta para Trabajador",
+      "default": "¿Quién trabajaría en el centro?"
+    },
+    {
+      "type": "text",
+      "id": "ubicacion_label",
+      "label": "Etiqueta para Ubicación",
+      "default": "¿Dónde te gustaría abrir tu centro?"
+    },
+    {
+      "type": "text",
+      "id": "ubicacion_placeholder",
+      "label": "Placeholder para Ubicación",
+      "default": "Ciudad o zona preferida"
+    },
+    {
+      "type": "text",
+      "id": "inversion_label",
+      "label": "Etiqueta para Inversión",
+      "default": "¿Actualmente dispones de la cantidad del canon de entrada ( 10.000€ + IVA )?"
+    },
+    {
+      "type": "text",
+      "id": "adecuacion_label",
+      "label": "Etiqueta para Adecuación",
+      "default": "¿Actualmente dispones de la cantidad necesaria ( 8.000€ + IVA aprox.) para la adecuación y puesta en marcha del local?"
+    },
+    {
+      "type": "text",
+      "id": "privacy_label",
+      "label": "Etiqueta para Política de Privacidad",
+      "default": "He leído y estoy de acuerdo con la política de privacidad"
+    },
+    {
+      "type": "text",
+      "id": "submit_text",
+      "label": "Texto del botón de envío",
+      "default": "ENVIAR"
+    }    
+  ],
+  "presets": [
+    {
+      "name": "Formulario de Franquicia"
+    }
+  ]
+}
+{% endschema %}
+<div class="franchise-form-container">
+<div class="franchise-form-box">
+  <h2 class="franchise-form-title">{{ section.settings.form_title }}</h2>
+  
+  {% form 'contact' %}   
+    <input type="hidden" name="contact[title]" value="franquicia-form">
+    <div class="form-field">
+      <label for="nombre">{{ section.settings.nombre_label }}</label>
+      <input type="text" id="nombre" name="contact[nombre]" required placeholder="{{ section.settings.nombre_placeholder }}">
+    </div>
+
+    <div class="form-field">
+      <label for="apellidos">{{ section.settings.apellidos_label }}</label>
+      <input type="text" id="apellidos" name="contact[apellidos]" required placeholder="{{ section.settings.apellidos_placeholder }}">
+    </div>
+
+    <div class="form-field">
+      <label for="telefono">{{ section.settings.telefono_label }}</label>
+      <input type="tel" id="telefono" name="contact[phone]" required placeholder="{{ section.settings.telefono_placeholder }}">
+    </div>
+
+    <div class="form-field">
+      <label for="email">{{ section.settings.email_label }}</label>
+      <input type="email" id="email" name="contact[email]" required placeholder="{{ section.settings.email_placeholder }}">
+    </div>
+
+    <div class="form-field select-container">
+      <label for="experiencia">{{ section.settings.experiencia_label }}</label>
+      <select id="experiencia" name="contact[experiencia]" required>
+        <option value="">Selecciona una opción</option>
+        <option value="Si, conozco el sector">Sí, conozco el sector</option>
+        <option value="No, pero me interesa">No, pero me interesa</option>
+      </select>
+    </div>
+
+    <div class="form-field select-container">
+      <label for="inicio">{{ section.settings.inicio_label }}</label>
+      <select id="inicio" name="contact[inicio]" required>
+        <option value="">Selecciona una opción</option>
+        <option value="En menos de 3 meses">En menos de 3 meses</option>
+        <option value="Entre 3 y 6 meses">Entre 3 y 6 meses</option>
+        <option value="En más de 6 meses">En más de 6 meses</option>
+      </select>
+    </div>
+
+    <div class="form-field select-container">
+      <label for="trabajador">{{ section.settings.trabajador_label }}</label>
+      <select id="trabajador" name="contact[trabajador]" required>
+        <option value="">Selecciona una opción</option>
+        <option value="Yo misma/o, es autoempleo">Yo misma/o, es autoempleo</option>
+        <option value="Contrataría personal">Contrataría personal</option>
+      </select>
+    </div>
+
+    <div class="form-field">
+      <label for="ubicacion">{{ section.settings.ubicacion_label }}</label>
+      <input type="text" id="ubicacion" name="contact[ubicacion]" required placeholder="{{ section.settings.ubicacion_placeholder }}">
+    </div>
+
+    <div class="form-field select-container">
+      <label for="inversion">{{ section.settings.inversion_label }}</label>
+      <select id="inversion" name="contact[inversion]" required>
+        <option value="">Selecciona una opción</option>
+        <option value="Si">Sí</option>
+        <option value="No">No</option>
+      </select>
+    </div>
+
+    <div class="form-field select-container">
+      <label for="adecuacion">{{ section.settings.adecuacion_label }}</label>
+      <select id="adecuacion" name="contact[adecuacion]" required>
+        <option value="">Selecciona una opción</option>
+        <option value="Si">Sí</option>
+        <option value="No">No</option>
+      </select>
+    </div>
+    <div class="full-grid">
+
+      <label class="custom-checkbox">
+        <input type="checkbox" name="contact[consent]" required>
+        <span>          
+          {{ section.settings.privacy_label }} <a href="/pages/politica-de-privacidad" target="_blank">política de privacidad</a>
+        </span>
+      </label>
+      {% if form.posted_successfully? %}
+      <p class="form-success">
+        Gracias por tu interés. Nos pondremos en contacto contigo pronto.
+      </p>
+    {% endif %}
+
+    {% if form.errors %}
+      <div class="form-errors">
+        {% for field in form.errors %}
+          <p>{{ field }} - {{ form.errors.messages[field] }}</p>
+        {% endfor %}
+      </div>
+    {% endif %}
+      <button type="submit" class="submit-button">{{ section.settings.submit_text }}</button>
+    </div>
+  {% endform %}
+</div>
+</div>
+<style>
+  .franchise-form-container{
+    background-color: #f7f7f7;
+  }
+  .franchise-form-box {
+    max-width: var(--page-width);
+    margin: 0 auto;
+    padding: 3rem 12rem;
+    margin-top: -12rem;
+    background-color: #fff;
+    z-index: 1;
+    position: relative;
+    border-radius: 3rem;
+  }
+
+  .franchise-form-title {
+    color: {{ section.settings.accent_color }};    
+    text-align: center;
+    margin-bottom: 5rem;
+    font-weight: bold;
+    font-size: 2.2em;
+  }
+  .franchise-form-container form{
+    display: grid;
+    grid-template-columns: 48% 48%;
+    column-gap: 2%;
+    row-gap: 2rem;
+    align-items: end;
+  }
+  .franchise-form-container .form-field{
+    margin-bottom: 15px;    
+  }
+
+  .franchise-form-container label {
+    display: block;
+    margin-bottom: 5px;
+    color: {{ section.settings.accent_color }};
+    font-weight: bold;
+    margin-left: 1.5rem;
+  }
+
+  .franchise-form-container input[type="text"],
+  .franchise-form-container input[type="tel"],
+  .franchise-form-container input[type="email"],
+  .franchise-form-container select {
+    width: 100%;
+    padding: 1.5rem;
+    border: none;
+    border-radius: 3rem;
+    background-color: #f1f1f1;
+    color: #757575;
+  }
+  .franchise-form-container .full-grid{
+    grid-column: 1 / -1;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .franchise-form-container .submit-button {
+    background: var(--custom-gradient);
+    color: white;
+    padding: 2rem 7rem;
+    border: none;
+    border-radius: 3rem;
+    cursor: pointer;
+    font-size: 1.2em;
+  }
+
+
+  .franchise-form-container .form-success {
+    color: green;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .franchise-form-container .form-errors {
+    color: red;
+    margin-bottom: 20px;
+  }
+  .franchise-form-container .select::after{
+    content: '>';
+    z-index: 1;
+    top: 0.5rem;
+    right: -80%;
+    font-size: 24px;
+    font-family: monospace;
+    transform: rotate(90deg);
+    font-weight: bold;         
+  }
+  .franchise-form-container .custom-checkbox {
+      display: flex;
+      align-items: center;
+      margin: 3rem auto;
+  }
+  
+  .franchise-form-container .custom-checkbox input[type="checkbox"] {
+      appearance: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      width: 20px;
+      height: 20px;
+      border: 1px solid #ddd;
+      border-radius: 50%;
+      outline: none;
+      cursor: pointer;
+      position: relative;
+      margin: 0;
+  }
+  
+  .franchise-form-container .custom-checkbox input[type="checkbox"]:checked {
+      background-color: #fff;
+      border: 1px solid #ff007f;
+  }
+  
+  .franchise-form-container .custom-checkbox input[type="checkbox"]:checked::before {
+      content: '\2713';
+      font-size: 14px;
+      color: #ff007f;
+      position: absolute;
+      top: -2px;
+      left: 3px;
+  }
+  .franchise-form-container .custom-checkbox span{
+      text-align: start;
+      line-height: 1.2;
+      margin-left: 1rem;
+      color: #000;
+      font-weight: normal;
+      font-size: 12px;
+  }
+  .franchise-form-container .custom-checkbox span a{
+      color: var(--custom-rosa);    
+  }
+  @media (max-width: 768px) {
+    .franchise-form-box {
+      padding: 2rem;      
+      border-radius: 0
+    }
+    .franchise-form-container form{
+      grid-template-columns: auto;
+      row-gap: 1;
+    }
+    .franchise-form-container .custom-checkbox input[type="checkbox"] {
+        width: 28px;
+    }
+    
+  }
+
+  
+</style>

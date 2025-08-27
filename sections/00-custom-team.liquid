@@ -1,0 +1,157 @@
+{% schema %}
+{
+  "name": "Equipo",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "logo",
+      "label": "Logo de la empresa"
+    },
+    {
+      "type": "color",
+      "id": "primary_color",
+      "label": "Color primario",
+      "default": "#000080"
+    },
+    {
+      "type": "color",
+      "id": "accent_color",
+      "label": "Color de acento",
+      "default": "#FF69B4"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Equipo",
+      "category": "Contenido"
+    }
+  ]
+}
+{% endschema %}
+
+<style>
+  .team-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+  }
+  .logo {
+    max-width: 300px;
+    width: 100%;
+    height: auto;
+    margin-bottom: 2rem;
+  }
+  .ceo-section, .staff-section {
+    margin-top: 2rem;
+  }
+  .section-title {
+    color: {{ section.settings.primary_color }};
+    font-size: 2.4em;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid {{ section.settings.primary_color }};
+  }
+  .staff-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    justify-items: center;
+    padding: 2rem 0;
+  }
+  .staff-member {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .staff-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+  }
+  .ceo .staff-image {
+    width: 300px;
+    height: 300px;
+  }
+  .staff-name {
+    color: {{ section.settings.accent_color }};
+    margin-bottom: 0;
+    font-size: 1.3em;
+  }
+  .staff-position {
+    color: {{ section.settings.primary_color }};
+    margin: 0;
+  }
+  .ceo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    justify-items: center;
+  }
+  @media (max-width: 768px){
+    .ceo .staff-image,
+    .staff-image{
+      width: 100%;
+      height: auto;
+    }
+  }
+</style>
+
+<div class="team-section">
+  {% if section.settings.logo != blank %}
+    {{ section.settings.logo | image_url: width: 300 | image_tag: 
+       class: 'logo', 
+       alt: 'Logo de la empresa'
+    }}
+  {% endif %}
+
+  {% assign ceo_count = 0 %}
+  {% for personal in shop.metaobjects.personal.values %}
+    {% if personal.cargo.value == 'CEO' %}
+      {% assign ceo_count = ceo_count | plus: 1 %}
+    {% endif %}
+  {% endfor %}
+
+  {% if ceo_count > 0 %}
+    <div class="ceo-section">
+      <h2 class="section-title">{% if ceo_count > 1 %}CEOs{% else %}CEO{% endif %}</h2>
+      <div class="ceo-grid">
+        {% for personal in shop.metaobjects.personal.values %}
+          {% if personal.cargo.value == 'CEO' %}
+            <div class="staff-member ceo">
+              {{ personal.imagen.value | image_url: width: 200 | image_tag: 
+                 class: 'staff-image', 
+                 alt: personal.nombre_y_apellidos.value, 
+                 width: 200, 
+                 height: 200 
+              }}
+              <p class="staff-name">{{ personal.nombre_y_apellidos.value }}</p>
+              <p class="staff-position">{{ personal.cargo.value }}</p>
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+  {% endif %}
+
+  <div class="staff-section">
+    <h2 class="section-title">Personal técnico</h2>
+    <div class="staff-grid">
+      {% for personal in shop.metaobjects.personal.values %}
+        {% if personal.cargo.value != 'CEO' %}
+          <div class="staff-member">
+            {{ personal.imagen.value | image_url: width: 150 | image_tag: 
+               class: 'staff-image', 
+               alt: personal.nombre_y_apellidos.value, 
+               width: 150, 
+               height: 150 
+            }}
+            <p class="staff-name">{{ personal.nombre_y_apellidos.value }}</p>
+            <p class="staff-position">{{ personal.cargo.value }}</p>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</div>

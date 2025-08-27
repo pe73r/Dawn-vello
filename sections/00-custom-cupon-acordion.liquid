@@ -1,0 +1,285 @@
+<style>
+  .offers {
+    margin: 2rem 0;
+  }
+  .offers .container{
+    max-width: 75rem;
+    margin: 0 auto;
+  }
+  .offers__group {
+    margin-bottom: 1rem;
+    border-radius: 3rem;
+    transition: all 0.5s ease;
+    overflow: hidden;
+  }
+  .offers__group--men{
+    border: 2px solid var(--custom-blau);
+    background-color: var(--custom-blau);
+  }
+  .offers__group--women{
+    border: 2px solid var(--custom-rosa);
+    background-color: var(--custom-rosa);        
+  }
+  .offers__group[open] {
+    background-color: #fff;
+  }
+  .offers__group--men[open] .offers__toggle{
+    color: var(--custom-blau);
+  }
+  .offers__group--women[open] .offers__toggle{
+    color: var(--custom-rosa);
+  }
+  .offers__toggle {
+    color: white;
+    width: 100%;
+    padding: 2.5rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: none;
+    font-weight: 500;
+    gap: 3rem;
+    font-size: 2rem;
+    transition: all 0.5s ease;
+  }
+  
+  .offers__toggle::-webkit-details-marker {
+    display: none;
+  }
+  
+  .offers__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 60rem;
+    margin: 0 auto;
+    padding-bottom: 5rem;
+  }  
+  
+  .offers__item {
+    display: block;
+    padding: 0;
+    text-decoration: none;
+    color: inherit;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+  }
+  
+  .offers__item:last-child {
+    border-bottom: none;
+  }
+  
+  .offers__item-title {
+    font-weight: bold;
+    font-size: 2.8rem;
+    margin: 0 0 .5rem;
+  }
+  
+  .offers__prices {
+    display: flex;
+    gap: 2rem;
+    line-height: 1.2;
+    margin: 1rem 0;
+  }
+  
+  .offers__price-group {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .offers__label {
+    font-size: 1.2rem;
+    color: #000;
+  }
+  
+  .offers__price {
+    font-weight: 600;
+    font-size: 3rem;
+  }
+  
+  .offers__price--regular {
+    text-decoration: line-through;
+    color: #000;
+  }
+  
+  .offers__price--sale {
+    color: var(--custom-rosa);
+  }  
+  
+  details[open] .offers__toggle svg {
+    transform: rotate(180deg);
+  }
+  
+  .offers__toggle svg {
+    transition: transform 0.3s ease;
+    position: static;
+    height: 1rem;
+  }
+  @media (max-width: 768px) {
+    .offers .container {
+      padding: 0 1.5rem;
+    }
+    .offers__content{
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+  }
+</style>
+
+<div class="offers section-{{ section.id }}-padding">
+  <div class="container">
+    {%- assign women_offers = section.blocks | where: "type", "women_offer" -%}
+    {%- assign men_offers = section.blocks | where: "type", "men_offer" -%}
+
+    {% if women_offers.size > 0 %}
+    <details class="offers__group offers__group--women">
+      <summary class="offers__toggle">
+        {{ section.settings.women_button_text }}
+        {% render 'icon-caret' %}
+      </summary>
+      <div class="offers__content">
+        {% for block in women_offers %}
+          <a href="{{ block.settings.link }}" class="offers__item">
+            <div class="offers__item-content">
+              <h3 class="offers__item-title">{{ block.settings.title }}</h3>
+              <div class="offers__prices">
+                <div class="offers__price-group">
+                  <span class="offers__label">Precio normal</span>
+                  <span class="offers__price offers__price--regular">{{ block.settings.regular_price }}€</span>
+                </div>
+                <div class="offers__price-group">
+                  <span class="offers__label">Oferta</span>
+                  <span class="offers__price offers__price--sale">{{ block.settings.sale_price }}€</span>
+                </div>
+              </div>
+            </div>
+          </a>
+        {% endfor %}
+      </div>
+    </details>
+    {% endif %}
+
+    {% if men_offers.size > 0 %}
+    <details class="offers__group offers__group--men">
+      <summary class="offers__toggle">
+        {{ section.settings.men_button_text }}
+        {% render 'icon-caret' %}
+      </summary>
+      <div class="offers__content">
+        {% for block in men_offers %}
+          <a href="{{ block.settings.link }}" class="offers__item">
+            <div class="offers__item-content">
+              <h3 class="offers__item-title">{{ block.settings.title }}</h3>
+              <div class="offers__prices">
+                <div class="offers__price-group">
+                  <span class="offers__label">Precio normal</span>
+                  <span class="offers__price offers__price--regular">{{ block.settings.regular_price }}€</span>
+                </div>
+                <div class="offers__price-group">
+                  <span class="offers__label">Oferta</span>
+                  <span class="offers__price offers__price--sale">{{ block.settings.sale_price }}€</span>
+                </div>
+              </div>
+            </div>
+          </a>
+        {% endfor %}
+      </div>
+    </details>
+    {% endif %}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Acordion Cupon",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "women_button_text",
+      "label": "Women's Button Text",
+      "default": "OFERTAS PARA ELLAS"
+    },
+    {
+      "type": "text",
+      "id": "men_button_text",
+      "label": "Men's Button Text",
+      "default": "OFERTAS PARA ELLOS"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "women_offer",
+      "name": "Women's Offer",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Treatment Name",
+          "default": "CUERPO COMPLETO"
+        },
+        {
+          "type": "text",
+          "id": "regular_price",
+          "label": "Regular Price",
+          "default": "20,50"
+        },
+        {
+          "type": "text",
+          "id": "sale_price",
+          "label": "Sale Price",
+          "default": "30"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Treatment Link"
+        }
+      ]
+    },
+    {
+      "type": "men_offer",
+      "name": "Men's Offer",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Treatment Name",
+          "default": "CUERPO COMPLETO"
+        },
+        {
+          "type": "text",
+          "id": "regular_price",
+          "label": "Regular Price",
+          "default": "20,50"
+        },
+        {
+          "type": "text",
+          "id": "sale_price",
+          "label": "Sale Price",
+          "default": "30"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Treatment Link"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Acordion Cupon",
+      "blocks": [
+        {
+          "type": "women_offer"
+        },
+        {
+          "type": "men_offer"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,153 @@
+{% schema %}
+{
+  "name": "Shops select component",
+  "limit": 1,
+  "settings": [
+    {
+      "type": "text",
+      "id": "province",
+      "label": "Provincia actual"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "select_title",
+      "label": "Texto Select"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Esquema de color",
+      "default": "scheme-1"
+    }
+    
+  ],
+  "presets": [
+    {
+      "name": "Shops select component",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}
+
+<style>
+  .shops-container{
+    max-width: var(--page-width);
+    margin: 8rem auto;
+  }
+  .shops-container .shops-select{
+    max-width: 600px;
+    margin: auto;
+    background-color: #eee;
+    border-radius: 2rem;
+    padding: 1rem;
+  }
+  .shops-container .shops-select h3{
+    color: var(--custom-rosa);
+    padding: 0 3rem;
+    font-weight: bold;
+    font-size: 1.4em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+  }
+  .shops-container .shops-select h3 .chevron{
+    font-family: monospace;
+    font-size: 32px;
+    transform: rotate(90deg);
+    color: #555;
+    transition: transform 0.5s;
+  }
+  .shops-container .shops-select.open h3 .chevron{
+    transform: rotate(270deg);
+  }
+  .shops-container .shops-select .shops{
+    display: none;
+    padding: 0 4rem;
+    max-height: 60vh;
+    overflow-y: scroll;
+  }
+  .shops-container .shops-select.open .shops{
+    display: block;
+  }
+  .shops-container .shops .shops-item{
+    display: grid;
+    grid-template-columns: 90% 10%;
+    grid-template-areas: 
+      "name btn"
+      "adress btn";
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 10px 0px #ddd;
+    padding: 1.5rem 5rem;
+    border-radius: 2rem;  
+    text-decoration: none;
+    color: black;
+    line-height: 1.5;
+    transition: border-color 0.7s;
+    border: 2px solid transparent;
+    background-color: #fff;
+    margin: 1rem 0;
+  }
+  .shops-container .shops .shops-item:hover{
+    border-color: var(--custom-rosa);
+  }
+  .shops-container .shops .shops-item .name{
+    grid-area: name;
+    font-size: 1.5em;
+  }
+  .shops-container .shops .shops-item .adress{
+    grid-area: adress;
+    font-size: 1em;
+  }
+  .shops-container .shops .shops-item .btn{
+    grid-area: btn;
+    font-size: 32px;
+    font-family: monospace;
+    font-weight: bold;
+    color: var(--custom-rosa);
+  }
+  @media (max-width: 768px){
+
+    .shops-container {        
+        margin: 0rem auto;
+    }
+    .shops-container .shops-select{
+      border-radius:0;
+      padding: 2rem 0 5rem;
+    }
+    .shops-container .shops-select .shops{
+      padding: 0 1.5rem;
+      max-height: 100%;
+      overflow: hidden;
+    }
+  }
+</style>
+
+<div class="shops-container">
+      <div class="shops-select open">
+        <h3> {{ section.settings.select_title }} <span class="chevron">></span></h3>
+        <div class="shops">
+          {% paginate shop.metaobjects.tiendas.values by 999 %}
+            {% for tienda in shop.metaobjects.tiendas.values %}              
+              {% if tienda.provincia_1.value.nombre == section.settings.province  %}             
+                    <a class="shops-item" href="{{ tienda.system.url }}">
+                      <span class="name">{{ tienda.nombre }}</span>
+                      <span class="adress">{{ tienda.direccion }}</span>
+                      <span class="btn">></span>
+                    </a>
+              {% endif %}
+            {% endfor %}
+          {% endpaginate %}
+        </div> 
+     </div> 
+</div>
+
+
+<script>
+  var select = document.querySelector(".shops-select h3");
+  select.addEventListener("click", function(){
+    select.parentNode.classList.toggle("open");
+  });
+</script>

@@ -1,0 +1,147 @@
+  <div class="section-{{ section.id }}-padding">
+    <div class="laser-treatments color-{{ section.settings.color_scheme }}">
+      <div class="laser-treatments__grid">
+        
+        <!-- Women's Treatments Column -->
+        <div class="laser-treatments__column color-{{ section.settings.women_color_scheme }}">
+          <h2 class="laser-treatments__title">{{ section.settings.women_title }}</h2>
+          <ul class="laser-treatments__list">          
+            {%- for treatment in collections -%}              
+              {%- if treatment.title contains "Mujer" or treatment.title contains "mujer" and treatment.metafields.custom.zonas_de_depilacion -%}
+                <li class="laser-treatments__item">
+                  <a href="{{ treatment.url }}" class="laser-treatments__link color-{{ section.settings.women_color_scheme }}">
+                    {{ treatment.title }}
+                  </a>
+                </li>
+              {%- endif -%}
+            {%- endfor -%}
+          </ul>
+        </div>
+
+        <!-- Men's Treatments Column -->
+        <div class="laser-treatments__column color-{{ section.settings.men_color_scheme }}">
+          <h2 class="laser-treatments__title">{{ section.settings.men_title }}</h2>
+          <ul class="laser-treatments__list">
+            {%- for treatment in collections -%}
+              {%- if treatment.title contains "Hombre" or treatment.title contains "hombre" and treatment.metafields.custom.zonas_de_depilacion -%}
+                <li class="laser-treatments__item">
+                  <a href="{{ treatment.url }}" class="laser-treatments__link color-{{ section.settings.men_color_scheme }}">
+                    {{ treatment.title }}
+                  </a>
+                </li>
+              {%- endif -%}
+            {%- endfor -%}
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+{% schema %}
+{
+  "name": "Laser Treatments",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "women_title",
+      "label": "Women's Section Title",
+      "default": "Depilación Láser Mujer"
+    },
+    {
+      "type": "text",
+      "id": "men_title",
+      "label": "Men's Section Title",
+      "default": "Depilación Láser Hombre"
+    },
+    {
+      "type": "color_scheme",
+      "id": "women_color_scheme",
+      "label": "Women's Column Color Scheme",
+      "default": "scheme-1"
+    },
+    {
+      "type": "color_scheme",
+      "id": "men_color_scheme",
+      "label": "Men's Column Color Scheme",
+      "default": "scheme-2"
+    },
+    {
+      "type": "header",
+      "content": "Section Padding"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding Top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding Bottom",
+      "default": 36
+    }
+  ],
+  "presets": [
+    {
+      "name": "Laser Treatments"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+.laser-treatments__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+@media screen and (min-width: 750px) {
+  .laser-treatments__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.laser-treatments__column {
+  padding: 2rem;
+}
+
+.laser-treatments__title {
+  font-size: 2.8rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.laser-treatments__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.laser-treatments__link {
+  display: block;
+  padding: 0.8rem;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 0.4rem;
+  transition: background-color 0.3s ease;
+  font-size: 1.8rem;
+}
+
+.laser-treatments__link:hover {
+  background-color: rgba(var(--color-foreground), 0.06);
+}
+{% endstylesheet %}

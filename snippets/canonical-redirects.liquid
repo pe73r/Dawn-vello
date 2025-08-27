@@ -1,0 +1,8 @@
+{% comment %}canonical-redirects.liquid{% endcomment %}
+{% assign canonical_map = page.url | split: '/' | last %}
+{% case canonical_map %}
+  {% when 'albacete-albacete-centro' %}
+    <link rel="canonical" href="{{ shop.url }}/pages/provincia/albacete" />
+  {% else %}
+    <link rel="canonical" href="{{ canonical_url }}" />
+{% endcase %}

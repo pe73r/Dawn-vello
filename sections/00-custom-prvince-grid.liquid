@@ -1,0 +1,105 @@
+{% schema %}
+{
+  "name": "Provincias Grid",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Título de la sección",
+      "default": "Provincias"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Esquema de color",
+      "default": "scheme-1"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Provincias Grid",
+      "category": "Contenido"
+    }
+  ]
+}
+{% endschema %}
+
+{% style %}
+
+.province-container{
+  padding: 5rem 0;
+}  
+.province-container h2{
+    text-align: center;
+    font-size: clamp(3.2rem, 5vi, 4.6rem);
+}
+.provincias-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1rem;
+  padding: 2rem 1rem;
+}
+
+@media (min-width: 640px) {
+  .provincias-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 768px) {
+  .provincias-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+}
+
+.provincia-link {
+    display: grid;
+    grid-template-columns: 90% 10%;
+    grid-template-areas: 
+      "name btn";
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 10px 0px #ddd;
+    padding: 1.5rem 5rem;
+    border-radius: 2rem;  
+    text-decoration: none;
+    color: black;
+    line-height: 1.5;
+    transition: border-color 0.7s;
+    border: 2px solid transparent;
+    background-color: #fff;
+    margin: 1rem 0;
+}
+
+.provincia-link:hover {
+  border-color: var(--custom-rosa);
+}
+
+.provincia-nombre {
+    grid-area: name;
+    font-size: 1.5em;
+}
+.provincia-link .btn{
+    grid-area: btn;
+    font-size: 32px;
+    font-family: monospace;
+    font-weight: bold;
+    color: var(--custom-rosa);
+}
+{% endstyle %}
+
+<div class="color-{{ section.settings.color_scheme }} province-container">
+  <div class="page-width">
+    <h2 class="h2 text-center">{{ section.settings.title }}</h2>
+    <div class="provincias-grid">
+      {% paginate shop.metaobjects.provincia.values by 999 %}        
+        {% for item in shop.metaobjects.provincia.values %}          
+          <a href="{{ item.system.url }}" class="provincia-link">
+            <span class="provincia-nombre">{{ item.nombre.value }}</span>
+            <span class="btn">></span>
+          </a>
+        {% endfor %}
+      {% endpaginate %}
+    </div>
+  </div>
+</div>

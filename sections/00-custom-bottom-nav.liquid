@@ -1,0 +1,310 @@
+<div class="bottom-bar color-{{ section.settings.color_scheme }}">
+  <div class="bottom-bar__container">
+    {% for block in section.blocks %}
+      {% case block.settings.display_option %}
+        {% when 'mobile' %}
+          {% assign display_class = 'bottom-bar__item--mobile' %}
+        {% when 'desktop' %}
+          {% assign display_class = 'bottom-bar__item--desktop' %}
+        {% else %}
+          {% assign display_class = '' %}
+      {% endcase %}
+
+      <div class="bottom-bar__item {{ display_class }}" {{ block.shopify_attributes }}>
+        {% if block.settings.whatsapp %} 
+          <span class="bottom-bar__link color-{{ section.settings.color_scheme }} openModal-Nuestros-Numeros-de-WhatsApp">
+          {% if block.settings.svg_code != blank %}
+            <div class="bottom-bar__icon">
+              {{ block.settings.svg_code }}
+            </div>
+          {% endif %}
+          <span class="bottom-bar__text">{{ block.settings.text }}</span>
+        </span>          
+        {% else %}
+          <a href="{{ block.settings.url }}" class="bottom-bar__link color-{{ section.settings.color_scheme }}">
+          {% if block.settings.svg_code != blank %}
+            <div class="bottom-bar__icon">
+              {{ block.settings.svg_code }}
+            </div>
+          {% endif %}
+          <span class="bottom-bar__text">{{ block.settings.text }}</span>
+        </a>
+        {% endif %}        
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+<div id="Nuestros-Numeros-de-WhatsApp" class="modal" style="display: none; background-color: rgba(0,0,0,0.4);">
+  <div class="modal-content color-{{ section.settings.color_scheme }}">
+    <span class="close">&times;</span>
+    <h2>{{ section.settings.modal_title }}</h2>
+    {% if section.settings.display-flex %}
+    <ul id="phone-list" class="flex"></ul>
+    {% else %}
+    <ul id="phone-list"></ul>
+    {% endif %}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Barra inferior",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "background-1"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "modal_title",
+      "label": "Título del Modal",
+      "default": "Nuestros Números de WhatsApp"
+    },
+    {
+      "type": "checkbox",
+      "id": "display-flex",
+      "label": "Mostrar en filas"    
+    },
+    {
+      "type": "textarea",
+      "id": "json_data",
+      "label": "Datos JSON",
+      "default": "[{\"number_title\": \"Nubulus\",\"phone_number\": \"123456\",\"action_type\": \"mesage\"},{\"number_title\": \"Nubulus\",\"phone_number\": \"123456\",\"action_type\": \"call\"}]",
+      "info": "Pega aquí el contenido JSON con la estructura adecuada."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "bottom_bar_item",
+      "name": "Barra Inferior",
+      "settings": [
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Text",
+          "default": "Menu item"
+        },
+        {
+          "type": "url",
+          "id": "url",
+          "label": "Link"
+        }
+        ,
+        {
+          "type": "checkbox",
+          "id": "whatsapp",
+          "label": "Es el boton de WhatsApp"
+        },
+        {
+          "type": "textarea",
+          "id": "svg_code",
+          "label": "Codigo SVG"
+        },
+        {
+          "type": "select",
+          "id": "display_option",
+          "options": [
+            {
+              "value": "both",
+              "label": "Ambos"
+            },
+            {
+              "value": "mobile",
+              "label": "Movil"
+            },
+            {
+              "value": "desktop",
+              "label": "Escritorio"
+            }
+          ],
+          "default": "both",
+          "label": "Mostrar en"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Barra inferior",
+      "blocks": [
+        {
+          "type": "bottom_bar_item"
+        },
+        {
+          "type": "bottom_bar_item"
+        },
+        {
+          "type": "bottom_bar_item"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+.bottom-bar {
+  position: fixed;
+  bottom: 10rem;
+  right: 0;
+  z-index: 100;
+  border-radius: 3rem 0 0 3rem;
+  padding: 0.5rem 2rem;
+  max-width: 12rem;
+}
+
+.bottom-bar__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.bottom-bar__item {
+  width: 100%;
+}
+
+.bottom-bar__link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  border-bottom: 2px solid;
+  padding: 1rem;    
+  text-align: center;
+  line-height: 1.4;
+  cursor: pointer;
+}
+.bottom-bar__item:last-child .bottom-bar__link{
+  border-bottom: none;
+}
+.bottom-bar__icon svg {
+  width: 16px;
+  height: 16px;
+}
+
+.bottom-bar__text {
+  font-size: 1.2rem;
+}
+
+@media screen and (max-width: 768px) {
+  .bottom-bar__item--desktop {
+    display: none;
+  }
+  .bottom-bar {
+    bottom: 0;
+    border-radius: 0;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .bottom-bar__container{
+    flex-direction: row;
+  }
+  .bottom-bar__link{
+    border-bottom: none;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .bottom-bar__item--mobile {
+    display: none;
+  }
+}
+
+  .modal {
+    position: fixed;
+    z-index: 99999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+  }
+  .modal-content {
+    position: relative;
+    margin: 20% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    border-radius: 15px;
+    text-align: center;
+  }
+  .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  #phone-list{
+    list-style: none;
+    padding: 0;
+  }
+  #phone-list li a{
+    text-decoration: none;
+    font-size: 1.3em;
+  }
+  #phone-list.flex{
+    display: flex;
+    flex-flow: wrap;
+    gap: 2rem;
+    justify-content: center;
+  }
+{% endstylesheet %}
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  var modal = document.getElementById("Nuestros-Numeros-de-WhatsApp");
+  var btns = document.querySelectorAll(".openModal-Nuestros-Numeros-de-WhatsApp");
+  var span = document.getElementsByClassName("close")[0];
+  var listContainer = document.querySelector('.modal-content #phone-list');
+  var jsonData = {{ section.settings.json_data }};  
+  var whatsappIcon = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16"><path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/></svg>';
+  var callIcon = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone" viewBox="0 0 16 16"><path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.6 17.6 0 0 0 4.168 6.608 17.6 17.6 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.68.68 0 0 0-.58-.122l-2.19.547a1.75 1.75 0 0 1-1.657-.459L5.482 8.062a1.75 1.75 0 0 1-.46-1.657l.548-2.19a.68.68 0 0 0-.122-.58zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"/></svg>';
+
+  listContainer.innerHTML = ''; 
+    jsonData.forEach(item => {
+      const listItem = document.createElement('li');
+      const link = document.createElement('a');  
+      if(item.action_type === 'call'){
+        link.href = `tel:${item.phone_number}`;
+        link.innerHTML = "<span>"+ item.number_title +"</span> " + callIcon;
+      }else{
+        link.href = `https://wa.me/${item.phone_number}`;
+        link.innerHTML = "<span>"+ item.number_title +"</span> " + whatsappIcon;
+      }      
+      link.classList.add("color-{{ section.settings.color_scheme }}");
+      listItem.appendChild(link);
+      listContainer.appendChild(listItem);
+    });
+
+  btns.forEach(function (btn){
+    btn.onclick = function() {
+      modal.style.display = "block";    
+    }
+  });
+  
+
+  span.onclick = function() {
+    modal.style.display = "none";
+  }
+
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+});
+</script>

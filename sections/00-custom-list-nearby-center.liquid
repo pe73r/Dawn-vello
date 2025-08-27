@@ -1,0 +1,97 @@
+{% schema %}
+{
+  "name": "Lista Centro Cercanos",
+  "settings": [
+    {
+      "type": "inline_richtext",
+      "id": "title",
+      "label": "Título de la sección",
+      "default": "CENTROS <strong>CERCANOS</strong>"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "text_front_center",
+      "label": "Texto delante de centro",
+      "default": "Depilación láser"
+    },
+    {
+      "type": "metaobject_list",
+      "metaobject_type": "tiendas",
+      "id": "nearby-centers",
+      "label": "Lista centros cercanos"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Esquema de color",
+      "default": "scheme-1"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Lista Centro Cercanos",
+      "category": "Contenido"
+    }
+  ]
+}
+{% endschema %}
+
+{% style %}
+
+.nearby-center-container{
+  padding: 5rem 0;
+}  
+.nearby-center-container h2{
+    text-align: center;
+    font-size: clamp(3.2rem, 5vi, 4.6rem);
+}
+.nearby-center-list {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1rem;
+  padding: 2rem 1rem;
+  list-style: none;  
+}
+
+@media (min-width: 768px) {
+  .nearby-center-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.nearby-center-list li{
+  
+}
+.nearby-center-list li a{
+    text-decoration: none;
+    line-height: 1.5;    
+    border-bottom: 1px solid #ddd;    
+    padding: 1rem 0;
+    text-align: center;
+    display: block;
+    transition: all 0.5s;
+}
+.nearby-center-list li a:hover{
+  border-color: var(--custom-rosa);
+}
+
+
+{% endstyle %}
+<div class="color-{{ section.settings.color_scheme }} nearby-center-container">
+  <div class="page-width">
+    {% if section.settings.title != "" %}
+      <h2>{{ section.settings.title }}</h2>
+    {% endif %}
+    <ul class="nearby-center-list">
+      {% paginate section.settings.nearby-centers by 999 %}        
+        {% for item in section.settings.nearby-centers %}
+          {% assign arraynombre = item.nombre.value | split: " / " %}
+            <li>
+              <a href="{{ item.system.url }}" class="color-{{ section.settings.color_scheme }}" title="{{ section.settings.text_front_center }} {{ arraynombre[1] }}">                
+                {{ section.settings.text_front_center }} {{ arraynombre[1] }}
+              </a>
+           </li>
+        {% endfor %}
+      {% endpaginate %}
+    </ul>
+  </div>
+</div>

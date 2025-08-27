@@ -1,0 +1,20 @@
+@media screen and (min-width: 768px) {
+  .menu-drawer__menu {
+    max-height: 50vh;
+    overflow-y: auto;
+    scrollbar-width: thin;
+  }
+  
+  .menu-drawer__menu::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  .menu-drawer__menu::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  .menu-drawer__menu::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 3px;
+  }
+}
